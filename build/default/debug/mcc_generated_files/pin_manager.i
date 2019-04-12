@@ -1,4 +1,4 @@
-# 1 "pin_manager.c"
+# 1 "mcc_generated_files/pin_manager.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "pin_manager.c" 2
-# 49 "pin_manager.c"
+# 1 "mcc_generated_files/pin_manager.c" 2
+# 49 "mcc_generated_files/pin_manager.c"
+# 1 "mcc_generated_files/pin_manager.h" 1
+# 54 "mcc_generated_files/pin_manager.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -16925,17 +16927,12 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 49 "pin_manager.c" 2
-
-# 1 "./pin_manager.h" 1
-# 183 "./pin_manager.h"
+# 54 "mcc_generated_files/pin_manager.h" 2
+# 142 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 195 "./pin_manager.h"
+# 154 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 50 "pin_manager.c" 2
-
-# 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdbool.h" 1 3
-# 51 "pin_manager.c" 2
+# 49 "mcc_generated_files/pin_manager.c" 2
 
 
 
@@ -16954,16 +16951,16 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-    TRISA = 0x11;
-    TRISB = 0xF0;
-    TRISC = 0xDF;
+    TRISA = 0x37;
+    TRISB = 0x30;
+    TRISC = 0xFF;
 
 
 
 
     ANSELC = 0xCF;
-    ANSELB = 0xF0;
-    ANSELA = 0x11;
+    ANSELB = 0x80;
+    ANSELA = 0x17;
 
 
 
@@ -16983,9 +16980,15 @@ void PIN_MANAGER_Initialize(void)
 
 
 
-
-
-
+    SLRCONA = 0x37;
+    SLRCONB = 0xF0;
+    SLRCONC = 0xFF;
+# 107 "mcc_generated_files/pin_manager.c"
+    RXPPS = 0x0D;
+    SSPDATPPS = 0x0C;
+    RB6PPS = 0x10;
+    RB7PPS = 0x12;
+    SSPCLKPPS = 0x0E;
 }
 
 void PIN_MANAGER_IOC(void)

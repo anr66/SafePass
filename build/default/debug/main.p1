@@ -1,26 +1,14 @@
 Version 4.0 HI-TECH Software Intermediate Code
-"935 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 935: extern volatile unsigned char T1CON __attribute__((address(0x018)));
-[v _T1CON `Vuc ~T0 @X0 0 e@24 ]
-"888
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 888: extern volatile unsigned short TMR1 __attribute__((address(0x016)));
-[v _TMR1 `Vus ~T0 @X0 0 e@22 ]
-"1180
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1180: extern volatile unsigned char T2CON __attribute__((address(0x01C)));
-[v _T2CON `Vuc ~T0 @X0 0 e@28 ]
-"1077
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1077: extern volatile unsigned char TMR2 __attribute__((address(0x01A)));
-[v _TMR2 `Vuc ~T0 @X0 0 e@26 ]
 "36 ./spi.h
 [; ;./spi.h: 36: void spiBegin(Spi_Mode sMode, Spi_Data_Sample sDataSample, Spi_Clock_Edge sClockEdge, Spi_Clock_Pol sClockPol)
-[c E9954 32 33 34 35 36 37 .. ]
-[n E9954 . MASTER_OSC_DIV4 MASTER_OSC_DIV16 MASTER_OSC_DIV64 MASTER_TMR2_DIV2 SLAVE_SS_EN SLAVE_SS_DIS  ]
-[c E9962 0 128 .. ]
-[n E9962 . SAMPLE_MIDDLE SAMPLE_END  ]
-[c E9970 0 64 .. ]
-[n E9970 . IDLE_TO_ACTIVE ACTIVE_TO_IDLE  ]
-[c E9966 8 0 .. ]
-[n E9966 . IDLE_HIGH IDLE_LOW  ]
+[c E10117 32 33 34 35 36 37 .. ]
+[n E10117 . MASTER_OSC_DIV4 MASTER_OSC_DIV16 MASTER_OSC_DIV64 MASTER_TMR2_DIV2 SLAVE_SS_EN SLAVE_SS_DIS  ]
+[c E10125 0 128 .. ]
+[n E10125 . SAMPLE_MIDDLE SAMPLE_END  ]
+[c E10133 0 64 .. ]
+[n E10133 . IDLE_TO_ACTIVE ACTIVE_TO_IDLE  ]
+[c E10129 8 0 .. ]
+[n E10129 . IDLE_HIGH IDLE_LOW  ]
 "34951 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 34951: extern volatile __bit TRISC5 __attribute__((address(0x475)));
 [v _TRISC5 `Vb ~T0 @X0 0 e@1141 ]
@@ -40,27 +28,39 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 28654: extern volatile __bit BF __attribute__((address(0x10A0)));
 [v _BF `Vb ~T0 @X0 0 e@4256 ]
 [p mainexit ]
+"70 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 70: void SYSTEM_Initialize(void);
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
+"83
+[; ;./mcc_generated_files/mcc.h: 83: void OSCILLATOR_Initialize(void);
+[v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
 "183 ./pin_manager.h
 [; ;./pin_manager.h: 183: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-[v F9937 `(v ~T0 @X0 1 tf1`ul ]
+[v F10106 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF9937 ~T0 @X0 0 e ]
+[v __delay `JF10106 ~T0 @X0 0 e ]
 [p i __delay ]
-"22021 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
-[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 22021: extern volatile unsigned char SSPDATPPS __attribute__((address(0xE21)));
-[v _SSPDATPPS `Vuc ~T0 @X0 0 e@3617 ]
-"2631
+"111 ./mcc_generated_files/eusart.h
+[; ;./mcc_generated_files/eusart.h: 111: void EUSART_Initialize(void);
+[v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
+"29 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
+[v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"322 ./mcc_generated_files/eusart.h
+[; ;./mcc_generated_files/eusart.h: 322: uint8_t EUSART_Read(void);
+[v _EUSART_Read `(uc ~T0 @X0 0 ef ]
+"2631 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 2631:     struct {
-[s S139 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S139 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 ]
+[s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S140 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 ]
 "2630
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 2630: typedef union {
-[u S138 `S139 1 ]
-[n S138 . . ]
+[u S139 `S140 1 ]
+[n S139 . . ]
 "2640
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 2640: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
-[v _LATAbits `VS138 ~T0 @X0 0 e@268 ]
+[v _LATAbits `VS139 ~T0 @X0 0 e@268 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1387,87 +1387,19 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27877
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 27877: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"19 ./delay.h
-[; ;./delay.h: 19: void ms_delay(int N)
-[v _ms_delay `(v ~T0 @X0 1 ef1`i ]
-"20
-[; ;./delay.h: 20: {
-{
-[e :U _ms_delay ]
-"19
-[; ;./delay.h: 19: void ms_delay(int N)
-[v _N `i ~T0 @X0 1 r1 ]
-"20
-[; ;./delay.h: 20: {
-[f ]
-"21
-[; ;./delay.h: 21:     T1CON = 0x8030;
-[e = _T1CON -> -> 32816 `ui `uc ]
-"22
-[; ;./delay.h: 22:     TMR1 = 0;
-[e = _TMR1 -> -> 0 `i `us ]
-"23
-[; ;./delay.h: 23:     while(TMR1 < 62.5*N)
-[e $U 1219  ]
-[e :U 1220 ]
-"24
-[; ;./delay.h: 24:     {
-{
-"25
-[; ;./delay.h: 25:     }
-}
-[e :U 1219 ]
-"23
-[; ;./delay.h: 23:     while(TMR1 < 62.5*N)
-[e $ < -> -> _TMR1 `ui `d * .62.5 -> _N `d 1220  ]
-[e :U 1221 ]
-"26
-[; ;./delay.h: 26: }
-[e :UE 1218 ]
-}
-"28
-[; ;./delay.h: 28: void us_delay(int us)
-[v _us_delay `(v ~T0 @X0 1 ef1`i ]
-"29
-[; ;./delay.h: 29: {
-{
-[e :U _us_delay ]
-"28
-[; ;./delay.h: 28: void us_delay(int us)
-[v _us `i ~T0 @X0 1 r1 ]
-"29
-[; ;./delay.h: 29: {
-[f ]
-"30
-[; ;./delay.h: 30:     T2CON = 0x8010;
-[e = _T2CON -> -> 32784 `ui `uc ]
-"31
-[; ;./delay.h: 31:     TMR2 = 0;
-[e = _TMR2 -> -> 0 `i `uc ]
-"32
-[; ;./delay.h: 32:     while (TMR2 < us * 2);
-[e $U 1223  ]
-[e :U 1224 ]
-[e :U 1223 ]
-[e $ < -> _TMR2 `i * _us -> 2 `i 1224  ]
-[e :U 1225 ]
-"33
-[; ;./delay.h: 33: }
-[e :UE 1222 ]
-}
 "36 ./spi.h
 [; ;./spi.h: 36: void spiBegin(Spi_Mode sMode, Spi_Data_Sample sDataSample, Spi_Clock_Edge sClockEdge, Spi_Clock_Pol sClockPol)
-[v _spiBegin `(v ~T0 @X0 1 ef4`E9954`E9962`E9970`E9966 ]
+[v _spiBegin `(v ~T0 @X0 1 ef4`E10117`E10125`E10133`E10129 ]
 "37
 [; ;./spi.h: 37: {
 {
 [e :U _spiBegin ]
 "36
 [; ;./spi.h: 36: void spiBegin(Spi_Mode sMode, Spi_Data_Sample sDataSample, Spi_Clock_Edge sClockEdge, Spi_Clock_Pol sClockPol)
-[v _sMode `E9954 ~T0 @X0 1 r1 ]
-[v _sDataSample `E9962 ~T0 @X0 1 r2 ]
-[v _sClockEdge `E9970 ~T0 @X0 1 r3 ]
-[v _sClockPol `E9966 ~T0 @X0 1 r4 ]
+[v _sMode `E10117 ~T0 @X0 1 r1 ]
+[v _sDataSample `E10125 ~T0 @X0 1 r2 ]
+[v _sClockEdge `E10133 ~T0 @X0 1 r3 ]
+[v _sClockPol `E10129 ~T0 @X0 1 r4 ]
 "37
 [; ;./spi.h: 37: {
 [f ]
@@ -1476,7 +1408,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _TRISC5 -> -> 0 `i `b ]
 "39
 [; ;./spi.h: 39:   if(sMode & 0b00000100)
-[e $ ! != & -> _sMode `ui -> -> 4 `i `ui -> -> 0 `i `ui 1227  ]
+[e $ ! != & -> _sMode `ui -> -> 4 `i `ui -> -> 0 `i `ui 1220  ]
 "40
 [; ;./spi.h: 40:   {
 {
@@ -1489,10 +1421,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 "43
 [; ;./spi.h: 43:   }
 }
-[e $U 1228  ]
+[e $U 1221  ]
 "44
 [; ;./spi.h: 44:   else
-[e :U 1227 ]
+[e :U 1220 ]
 "45
 [; ;./spi.h: 45:   {
 {
@@ -1505,13 +1437,13 @@ Version 4.0 HI-TECH Software Intermediate Code
 "48
 [; ;./spi.h: 48:   }
 }
-[e :U 1228 ]
+[e :U 1221 ]
 "49
 [; ;./spi.h: 49:   SSPCON = sMode | sClockPol;
 [e = _SSPCON -> | -> _sMode `ui -> _sClockPol `ui `uc ]
 "50
 [; ;./spi.h: 50: }
-[e :UE 1226 ]
+[e :UE 1219 ]
 }
 "52
 [; ;./spi.h: 52: void spiWrite(char dat){
@@ -1525,7 +1457,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e = _SSPBUF -> _dat `uc ]
 "54
 [; ;./spi.h: 54: }
-[e :UE 1229 ]
+[e :UE 1222 ]
 }
 "56
 [; ;./spi.h: 56: char spiRead(){
@@ -1535,125 +1467,116 @@ Version 4.0 HI-TECH Software Intermediate Code
 [f ]
 "57
 [; ;./spi.h: 57:     if(BF){
-[e $ ! _BF 1231  ]
+[e $ ! _BF 1224  ]
 {
 "58
 [; ;./spi.h: 58:         return SSPBUF;
 [e ) -> _SSPBUF `uc ]
-[e $UE 1230  ]
+[e $UE 1223  ]
 "59
 [; ;./spi.h: 59:     }
 }
-[e :U 1231 ]
+[e :U 1224 ]
 "60
 [; ;./spi.h: 60: }
-[e :UE 1230 ]
+[e :UE 1223 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"21 main.c
-[; ;main.c: 21: int main(int argc, char** argv)
+"28 main.c
+[; ;main.c: 28: int main(int argc, char** argv)
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
-"22
-[; ;main.c: 22: {
+"29
+[; ;main.c: 29: {
 {
 [e :U _main ]
-"21
-[; ;main.c: 21: int main(int argc, char** argv)
+"28
+[; ;main.c: 28: int main(int argc, char** argv)
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
-"22
-[; ;main.c: 22: {
-[f ]
-"23
-[; ;main.c: 23:     PIN_MANAGER_Initialize();
-[e ( _PIN_MANAGER_Initialize ..  ]
-"24
-[; ;main.c: 24:     _delay((unsigned long)((100)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"26
-[; ;main.c: 26:     spiBegin(MASTER_OSC_DIV4, SAMPLE_MIDDLE, IDLE_TO_ACTIVE, IDLE_LOW);
-[e ( _spiBegin (4 , , , . `E9954 0 . `E9962 0 . `E9970 0 . `E9966 1 ]
 "29
-[; ;main.c: 29:     while(1)
-[e :U 1234 ]
-"30
-[; ;main.c: 30:     {
-{
+[; ;main.c: 29: {
+[f ]
+"31
+[; ;main.c: 31:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
 "32
-[; ;main.c: 32:         SSPDATPPS = 0x01;
-[e = _SSPDATPPS -> -> 1 `i `uc ]
-"33
-[; ;main.c: 33:         do { LATAbits.LATA1 = 1; } while(0);
-[e :U 1238 ]
+[; ;main.c: 32:     OSCILLATOR_Initialize();
+[e ( _OSCILLATOR_Initialize ..  ]
+"36
+[; ;main.c: 36:     PIN_MANAGER_Initialize();
+[e ( _PIN_MANAGER_Initialize ..  ]
+"37
+[; ;main.c: 37:     _delay((unsigned long)((10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"43
+[; ;main.c: 43:     _delay((unsigned long)((10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"45
+[; ;main.c: 45:     EUSART_Initialize();
+[e ( _EUSART_Initialize ..  ]
+"53
+[; ;main.c: 53:     int x = 0;
+[v _x `i ~T0 @X0 1 a ]
+[e = _x -> 0 `i ]
+"54
+[; ;main.c: 54:     uint8_t data[50];
+[v _data `uc ~T0 @X0 -> 50 `i a ]
+"55
+[; ;main.c: 55:     memset(data, 0, sizeof(data));
+[e ( _memset (3 , , -> &U _data `*v -> 0 `i -> # _data `ui ]
+"58
+[; ;main.c: 58:     while(1)
+[e :U 1229 ]
+"59
+[; ;main.c: 59:     {
+{
+"87
+[; ;main.c: 87:         data[x] = EUSART_Read();
+[e = *U + &U _data * -> -> _x `ui `ux -> -> # *U &U _data `ui `ux ( _EUSART_Read ..  ]
+"88
+[; ;main.c: 88:         x++;
+[e ++ _x -> 1 `i ]
+"90
+[; ;main.c: 90:         if (x == 49)
+[e $ ! == _x -> 49 `i 1231  ]
+"91
+[; ;main.c: 91:         {
+{
+"92
+[; ;main.c: 92:             x = 0;
+[e = _x -> 0 `i ]
+"93
+[; ;main.c: 93:         }
+}
+[e :U 1231 ]
+"101
+[; ;main.c: 101:         if (data[1] > 0)
+[e $ ! > -> *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 0 `i 1232  ]
+"102
+[; ;main.c: 102:         {
+{
+"103
+[; ;main.c: 103:             do { LATAbits.LATA1 = 1; } while(0);
+[e :U 1235 ]
 {
 [e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
 }
-[e :U 1237 ]
-"34
-[; ;main.c: 34:         _delay((unsigned long)((500)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"35
-[; ;main.c: 35:         do { LATAbits.LATA1 = 0; } while(0);
-[e :U 1241 ]
-{
-[e = . . _LATAbits 0 1 -> -> 0 `i `uc ]
+[e :U 1234 ]
+"107
+[; ;main.c: 107:         }
 }
-[e :U 1240 ]
-"36
-[; ;main.c: 36:         _delay((unsigned long)((500)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"39
-[; ;main.c: 39:         uint8_t result = spiRead();
-[v _result `uc ~T0 @X0 1 a ]
-[e = _result -> ( _spiRead ..  `uc ]
-"40
-[; ;main.c: 40:         _delay((unsigned long)((100)*(500000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 500000 `l `d .4000.0 `ul ]
-"42
-[; ;main.c: 42:         if (result == 0b00000001)
-[e $ ! == -> _result `i -> 1 `i 1242  ]
-"43
-[; ;main.c: 43:         {
-{
-"44
-[; ;main.c: 44:             do { LATAbits.LATA2 = 1; } while(0);
-[e :U 1245 ]
-{
-[e = . . _LATAbits 0 2 -> -> 1 `i `uc ]
+[e :U 1232 ]
+"169
+[; ;main.c: 169:     }
 }
-[e :U 1244 ]
-"45
-[; ;main.c: 45:         }
-}
-[e $U 1246  ]
-"47
-[; ;main.c: 47:         else
-[e :U 1242 ]
-"48
-[; ;main.c: 48:         {
-{
-"49
-[; ;main.c: 49:             do { LATAbits.LATA2 = 0; } while(0);
-[e :U 1249 ]
-{
-[e = . . _LATAbits 0 2 -> -> 0 `i `uc ]
-}
-[e :U 1248 ]
-"50
-[; ;main.c: 50:         }
-}
-[e :U 1246 ]
-"51
-[; ;main.c: 51:     }
-}
-[e :U 1233 ]
-[e $U 1234  ]
-[e :U 1235 ]
-"53
-[; ;main.c: 53:     return (0);
+[e :U 1228 ]
+[e $U 1229  ]
+[e :U 1230 ]
+"171
+[; ;main.c: 171:     return (0);
 [e ) -> 0 `i ]
-[e $UE 1232  ]
-"54
-[; ;main.c: 54: }
-[e :UE 1232 ]
+[e $UE 1227  ]
+"172
+[; ;main.c: 172: }
+[e :UE 1227 ]
 }

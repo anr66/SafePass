@@ -1,26 +1,24 @@
 /**
-  Generated Pin Manager File
+  @Generated PIC10 / PIC12 / PIC16 / PIC18 MCUs Header File
 
-  Company:
+  @Company:
     Microchip Technology Inc.
 
-  File Name:
-    pin_manager.c
+  @File Name:
+    mcc.h
 
-  Summary:
-    This is the Pin Manager file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
+  @Summary:
+    This is the mcc.h file generated using PIC10 / PIC12 / PIC16 / PIC18 MCUs
 
-  Description:
-    This header file provides implementations for pin APIs for all pins selected in the GUI.
+  @Description:
+    This header file provides implementations for driver APIs for all modules selected in the GUI.
     Generation Information :
-        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.65.2
+        Product Revision  :  PIC10 / PIC12 / PIC16 / PIC18 MCUs - 1.76
         Device            :  PIC16F1619
-        Driver Version    :  2.01
+        Driver Version    :  2.00
     The generated drivers are tested against the following:
-        Compiler          :  XC8 1.45
-        MPLAB             :  MPLAB X 4.15
-
-    Copyright (c) 2013 - 2015 released Microchip Technology Inc.  All rights reserved.
+        Compiler          :  XC8 2.00 or later
+        MPLAB             :  MPLAB X 5.10
 */
 
 /*
@@ -46,64 +44,47 @@
     SOFTWARE.
 */
 
+#ifndef MCC_H
+#define	MCC_H
 #include <xc.h>
+#include "device_config.h"
 #include "pin_manager.h"
-#include "stdbool.h"
+#include <stdint.h>
+#include <stdbool.h>
+#include "spi.h"
+#include "eusart.h"
 
 
 
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the device to the default states configured in the
+ *                  MCC GUI
+ * @Example
+    SYSTEM_Initialize(void);
+ */
+void SYSTEM_Initialize(void);
 
-
-void PIN_MANAGER_Initialize(void)
-{
-    /**
-    LATx registers
-    */
-    LATA = 0x00;
-    LATB = 0x00;
-    LATC = 0x00;
-
-    /**
-    TRISx registers
-    */
-    TRISA = 0x11;
-    TRISB = 0xF0;
-    TRISC = 0xDF;
-
-    /**
-    ANSELx registers
-    */
-    ANSELC = 0xCF;
-    ANSELB = 0xF0;
-    ANSELA = 0x11;
-
-    /**
-    WPUx registers
-    */
-    WPUB = 0x00;
-    WPUA = 0x00;
-    WPUC = 0x00;
-    OPTION_REGbits.nWPUEN = 1;
-
-    /**
-    ODx registers
-    */
-    ODCONA = 0x00;
-    ODCONB = 0x00;
-    ODCONC = 0x00;
+/**
+ * @Param
+    none
+ * @Returns
+    none
+ * @Description
+    Initializes the oscillator to the default states configured in the
+ *                  MCC GUI
+ * @Example
+    OSCILLATOR_Initialize(void);
+ */
+void OSCILLATOR_Initialize(void);
 
 
 
-
-
-   
-    
-}
-  
-void PIN_MANAGER_IOC(void)
-{   
-}
-
+#endif	/* MCC_H */
 /**
  End of File
 */

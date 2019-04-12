@@ -59,6 +59,30 @@ Version 4.0 HI-TECH Software Intermediate Code
 "6168
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 6168: extern volatile unsigned char ODCONC __attribute__((address(0x28E)));
 [v _ODCONC `Vuc ~T0 @X0 0 e@654 ]
+"6802
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 6802: extern volatile unsigned char SLRCONA __attribute__((address(0x30C)));
+[v _SLRCONA `Vuc ~T0 @X0 0 e@780 ]
+"6847
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 6847: extern volatile unsigned char SLRCONB __attribute__((address(0x30D)));
+[v _SLRCONB `Vuc ~T0 @X0 0 e@781 ]
+"6886
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 6886: extern volatile unsigned char SLRCONC __attribute__((address(0x30E)));
+[v _SLRCONC `Vuc ~T0 @X0 0 e@782 ]
+"22153
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 22153: extern volatile unsigned char RXPPS __attribute__((address(0xE24)));
+[v _RXPPS `Vuc ~T0 @X0 0 e@3620 ]
+"22021
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 22021: extern volatile unsigned char SSPDATPPS __attribute__((address(0xE21)));
+[v _SSPDATPPS `Vuc ~T0 @X0 0 e@3617 ]
+"22945
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 22945: extern volatile unsigned char RB6PPS __attribute__((address(0xE9E)));
+[v _RB6PPS `Vuc ~T0 @X0 0 e@3742 ]
+"22989
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 22989: extern volatile unsigned char RB7PPS __attribute__((address(0xE9F)));
+[v _RB7PPS `Vuc ~T0 @X0 0 e@3743 ]
+"21977
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 21977: extern volatile unsigned char SSPCLKPPS __attribute__((address(0xE20)));
+[v _SSPCLKPPS `Vuc ~T0 @X0 0 e@3616 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1385,75 +1409,99 @@ Version 4.0 HI-TECH Software Intermediate Code
 "27877
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 27877: __asm("TOSH equ 0FEFh");
 [; <" TOSH equ 0FEFh ;# ">
-"57 pin_manager.c
-[; ;pin_manager.c: 57: void PIN_MANAGER_Initialize(void)
+"55 mcc_generated_files/pin_manager.c
+[; ;mcc_generated_files/pin_manager.c: 55: void PIN_MANAGER_Initialize(void)
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
-"58
-[; ;pin_manager.c: 58: {
+"56
+[; ;mcc_generated_files/pin_manager.c: 56: {
 {
 [e :U _PIN_MANAGER_Initialize ]
 [f ]
-"62
-[; ;pin_manager.c: 62:     LATA = 0x00;
+"60
+[; ;mcc_generated_files/pin_manager.c: 60:     LATA = 0x00;
 [e = _LATA -> -> 0 `i `uc ]
-"63
-[; ;pin_manager.c: 63:     LATB = 0x00;
+"61
+[; ;mcc_generated_files/pin_manager.c: 61:     LATB = 0x00;
 [e = _LATB -> -> 0 `i `uc ]
-"64
-[; ;pin_manager.c: 64:     LATC = 0x00;
+"62
+[; ;mcc_generated_files/pin_manager.c: 62:     LATC = 0x00;
 [e = _LATC -> -> 0 `i `uc ]
+"67
+[; ;mcc_generated_files/pin_manager.c: 67:     TRISA = 0x37;
+[e = _TRISA -> -> 55 `i `uc ]
+"68
+[; ;mcc_generated_files/pin_manager.c: 68:     TRISB = 0x30;
+[e = _TRISB -> -> 48 `i `uc ]
 "69
-[; ;pin_manager.c: 69:     TRISA = 0x11;
-[e = _TRISA -> -> 17 `i `uc ]
-"70
-[; ;pin_manager.c: 70:     TRISB = 0xF0;
-[e = _TRISB -> -> 240 `i `uc ]
-"71
-[; ;pin_manager.c: 71:     TRISC = 0xDF;
-[e = _TRISC -> -> 223 `i `uc ]
-"76
-[; ;pin_manager.c: 76:     ANSELC = 0xCF;
+[; ;mcc_generated_files/pin_manager.c: 69:     TRISC = 0xFF;
+[e = _TRISC -> -> 255 `i `uc ]
+"74
+[; ;mcc_generated_files/pin_manager.c: 74:     ANSELC = 0xCF;
 [e = _ANSELC -> -> 207 `i `uc ]
-"77
-[; ;pin_manager.c: 77:     ANSELB = 0xF0;
-[e = _ANSELB -> -> 240 `i `uc ]
-"78
-[; ;pin_manager.c: 78:     ANSELA = 0x11;
-[e = _ANSELA -> -> 17 `i `uc ]
-"83
-[; ;pin_manager.c: 83:     WPUB = 0x00;
+"75
+[; ;mcc_generated_files/pin_manager.c: 75:     ANSELB = 0x80;
+[e = _ANSELB -> -> 128 `i `uc ]
+"76
+[; ;mcc_generated_files/pin_manager.c: 76:     ANSELA = 0x17;
+[e = _ANSELA -> -> 23 `i `uc ]
+"81
+[; ;mcc_generated_files/pin_manager.c: 81:     WPUB = 0x00;
 [e = _WPUB -> -> 0 `i `uc ]
-"84
-[; ;pin_manager.c: 84:     WPUA = 0x00;
+"82
+[; ;mcc_generated_files/pin_manager.c: 82:     WPUA = 0x00;
 [e = _WPUA -> -> 0 `i `uc ]
-"85
-[; ;pin_manager.c: 85:     WPUC = 0x00;
+"83
+[; ;mcc_generated_files/pin_manager.c: 83:     WPUC = 0x00;
 [e = _WPUC -> -> 0 `i `uc ]
-"86
-[; ;pin_manager.c: 86:     OPTION_REGbits.nWPUEN = 1;
+"84
+[; ;mcc_generated_files/pin_manager.c: 84:     OPTION_REGbits.nWPUEN = 1;
 [e = . . _OPTION_REGbits 0 5 -> -> 1 `i `uc ]
-"91
-[; ;pin_manager.c: 91:     ODCONA = 0x00;
+"89
+[; ;mcc_generated_files/pin_manager.c: 89:     ODCONA = 0x00;
 [e = _ODCONA -> -> 0 `i `uc ]
-"92
-[; ;pin_manager.c: 92:     ODCONB = 0x00;
+"90
+[; ;mcc_generated_files/pin_manager.c: 90:     ODCONB = 0x00;
 [e = _ODCONB -> -> 0 `i `uc ]
-"93
-[; ;pin_manager.c: 93:     ODCONC = 0x00;
+"91
+[; ;mcc_generated_files/pin_manager.c: 91:     ODCONC = 0x00;
 [e = _ODCONC -> -> 0 `i `uc ]
-"101
-[; ;pin_manager.c: 101: }
+"96
+[; ;mcc_generated_files/pin_manager.c: 96:     SLRCONA = 0x37;
+[e = _SLRCONA -> -> 55 `i `uc ]
+"97
+[; ;mcc_generated_files/pin_manager.c: 97:     SLRCONB = 0xF0;
+[e = _SLRCONB -> -> 240 `i `uc ]
+"98
+[; ;mcc_generated_files/pin_manager.c: 98:     SLRCONC = 0xFF;
+[e = _SLRCONC -> -> 255 `i `uc ]
+"107
+[; ;mcc_generated_files/pin_manager.c: 107:     RXPPS = 0x0D;
+[e = _RXPPS -> -> 13 `i `uc ]
+"108
+[; ;mcc_generated_files/pin_manager.c: 108:     SSPDATPPS = 0x0C;
+[e = _SSPDATPPS -> -> 12 `i `uc ]
+"109
+[; ;mcc_generated_files/pin_manager.c: 109:     RB6PPS = 0x10;
+[e = _RB6PPS -> -> 16 `i `uc ]
+"110
+[; ;mcc_generated_files/pin_manager.c: 110:     RB7PPS = 0x12;
+[e = _RB7PPS -> -> 18 `i `uc ]
+"111
+[; ;mcc_generated_files/pin_manager.c: 111:     SSPCLKPPS = 0x0E;
+[e = _SSPCLKPPS -> -> 14 `i `uc ]
+"112
+[; ;mcc_generated_files/pin_manager.c: 112: }
 [e :UE 1216 ]
 }
-"103
-[; ;pin_manager.c: 103: void PIN_MANAGER_IOC(void)
+"114
+[; ;mcc_generated_files/pin_manager.c: 114: void PIN_MANAGER_IOC(void)
 [v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
-"104
-[; ;pin_manager.c: 104: {
+"115
+[; ;mcc_generated_files/pin_manager.c: 115: {
 {
 [e :U _PIN_MANAGER_IOC ]
 [f ]
-"105
-[; ;pin_manager.c: 105: }
+"116
+[; ;mcc_generated_files/pin_manager.c: 116: }
 [e :UE 1217 ]
 }
