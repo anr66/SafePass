@@ -16,7 +16,7 @@
 #include <stdint.h>
 #include <string.h>
 //#include "delay.h"
-#include "pin_manager.h"
+#include "mcc_generated_files/pin_manager.h"
 #include "spi.h"
 //#include "uart.h"
 #include "mcc_generated_files/eusart.h"
@@ -27,7 +27,6 @@
  */
 int main(int argc, char** argv)
 {
-
     SYSTEM_Initialize();
     OSCILLATOR_Initialize();
     
@@ -40,9 +39,10 @@ int main(int argc, char** argv)
     
     // Initialize the uart
     //UART_Init(115200);
-    __delay_ms(10);
+
     
     EUSART_Initialize();
+    __delay_ms(10);
     
     // Initialize the spi
     //spiBegin(MASTER_OSC_DIV4, SAMPLE_MIDDLE, IDLE_TO_ACTIVE, IDLE_LOW);
@@ -50,9 +50,17 @@ int main(int argc, char** argv)
     
     //TRISCbits.TRISC5 = 1;
     
+    //int n = 0;
     int x = 0;
-    uint8_t data[50];
+    uint8_t data[8];
+    
+    
     memset(data, 0, sizeof(data));
+    
+    TRISAbits.TRISA3 = 0;
+    TRISAbits.TRISA4 = 0;
+    TRISAbits.TRISA5= 0; // set pin as output
+    //LATAbits.LATA5 = 1;  //set pin as high
     
     // Begin infinite loop
     while(1)
@@ -84,88 +92,55 @@ int main(int argc, char** argv)
         //    data[i] = EUSART_Read();
         //}
         
+        //LATAbits.LATA3 = 1;
+        //LATAbits.LATA5 = 1;
+        //PORTAbits.RA5 = 1;
+                
         data[x] = EUSART_Read();
+        uint8_t header = 0x59;
+        uint8_t  zero = 0x00;
+        uint8_t distance = 0x40;
         x++;
         
-        if (x == 49)
+        if (x == 8)
         {
             x = 0;
+             
+            int n = 0;
+            
+            for (int n = 0; n < 8; n++)
+            {
+                if ((data[n] != header) && (data[n] != zero))
+                {
+                    if((data[n - 1] == zero) && (data[n] != zero))
+                    {
+                        LATAbits.LATA5 = 0;
+                        PORTAbits.RA4 = 0;
+                        
+                    
+                    }
+                    
+                    else if (data[n] > distance)
+                    {
+                        LATAbits.LATA5 = 1;
+            
+                
+                
+                        PORTAbits.RA4 = 1;
+                    }   
+            
+                    
+                    
+                    else
+                    {
+
+                        LATAbits.LATA5 = 0;
+                        PORTAbits.RA4 = 0;
+                    }
+                    
+                }          
+            }           
         }
-        
-        //memset(data, 0, sizeof(data));
-        
-        
-        //__delay_ms(100);
-        
-        
-        if (data[1] > 0)
-        {
-            LED_D5_SetHigh();
-            //__delay_ms(100);
-            //LED_D5_SetLow();
-            //__delay_ms(100);
-        }
-        /*
-        
-        char lidar_data[9];
-        UART_Read_Text(lidar_data, 9);
-    
-        
-        if (lidar_data[0] == 0x59)
-        {
-            LED_D5_SetHigh();
-            __delay_ms(100);
-            LED_D5_SetLow();
-            __delay_ms(100);
-        }
-         */
-        
-        //LED_D5_SetHigh();
-        //__delay_ms(100);
-        //LED_D5_SetLow();
-        //__delay_ms(100);       
-        
-        //char data;
-        
-        //uint8_t data;
-        //data = UART_Read();
-        
-        //char test = PORTCbits.RC5;
-        //char test2 = PORTC;
-        
-        //if (PORTCbits.RC5 >= 0x01)
-       // {
-         //   LED_D5_SetHigh();
-         //   __delay_ms(100);
-         //   LED_D5_SetLow();
-         //   __delay_ms(100);  
-        //}
-        
-        
-        //LED_D4_SetHigh();
-        //__delay_ms(1000);
-        //LED_D4_SetLow();
-        //__delay_ms(1000);
-        
-        //__delay_ms(100);
-        //char uart;
-        //uart = UART_Read();
-        
-        
-        //uint8_t result = spiRead();
-        //__delay_ms(100);
-        
-        /*
-        if (SSPDATPPS == 0x01)
-        {
-            LED_D6_SetHigh();
-        }
-        
-        else
-        {
-            LED_D6_SetLow();
-        }
-        */
     }
 
     return (EXIT_SUCCESS);

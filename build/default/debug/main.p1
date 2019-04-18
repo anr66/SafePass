@@ -34,12 +34,12 @@ Version 4.0 HI-TECH Software Intermediate Code
 "83
 [; ;./mcc_generated_files/mcc.h: 83: void OSCILLATOR_Initialize(void);
 [v _OSCILLATOR_Initialize `(v ~T0 @X0 0 ef ]
-"183 ./pin_manager.h
-[; ;./pin_manager.h: 183: void PIN_MANAGER_Initialize (void);
+"142 ./mcc_generated_files/pin_manager.h
+[; ;./mcc_generated_files/pin_manager.h: 142: void PIN_MANAGER_Initialize (void);
 [v _PIN_MANAGER_Initialize `(v ~T0 @X0 0 ef ]
-[v F10106 `(v ~T0 @X0 1 tf1`ul ]
+[v F10104 `(v ~T0 @X0 1 tf1`ul ]
 "92 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic.h
-[v __delay `JF10106 ~T0 @X0 0 e ]
+[v __delay `JF10104 ~T0 @X0 0 e ]
 [p i __delay ]
 "111 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 111: void EUSART_Initialize(void);
@@ -47,6 +47,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "29 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
+"1620 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1620:     struct {
+[s S97 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S97 . TRISA0 TRISA1 TRISA2 TRISA3 TRISA4 TRISA5 ]
+"1619
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1619: typedef union {
+[u S96 `S97 1 ]
+[n S96 . . ]
+"1629
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1629: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x08C)));
+[v _TRISAbits `VS96 ~T0 @X0 0 e@140 ]
 "322 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 322: uint8_t EUSART_Read(void);
 [v _EUSART_Read `(uc ~T0 @X0 0 ef ]
@@ -61,6 +72,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2640
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 2640: extern volatile LATAbits_t LATAbits __attribute__((address(0x10C)));
 [v _LATAbits `VS139 ~T0 @X0 0 e@268 ]
+"435
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 435:     struct {
+[s S37 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S37 . RA0 RA1 RA2 RA3 RA4 RA5 ]
+"434
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 434: typedef union {
+[u S36 `S37 1 ]
+[n S36 . . ]
+"444
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
+[v _PORTAbits `VS36 ~T0 @X0 0 e@12 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1514,69 +1536,134 @@ Version 4.0 HI-TECH Software Intermediate Code
 "45
 [; ;main.c: 45:     EUSART_Initialize();
 [e ( _EUSART_Initialize ..  ]
-"53
-[; ;main.c: 53:     int x = 0;
+"54
+[; ;main.c: 54:     int x = 0;
 [v _x `i ~T0 @X0 1 a ]
 [e = _x -> 0 `i ]
-"54
-[; ;main.c: 54:     uint8_t data[50];
-[v _data `uc ~T0 @X0 -> 50 `i a ]
 "55
-[; ;main.c: 55:     memset(data, 0, sizeof(data));
-[e ( _memset (3 , , -> &U _data `*v -> 0 `i -> # _data `ui ]
+[; ;main.c: 55:     uint8_t data[8];
+[v _data `uc ~T0 @X0 -> 8 `i a ]
+"56
+[; ;main.c: 56:     uint8_t header_char = 0x59;
+[v _header_char `uc ~T0 @X0 1 a ]
+[e = _header_char -> -> 89 `i `uc ]
 "58
-[; ;main.c: 58:     while(1)
-[e :U 1229 ]
+[; ;main.c: 58:     memset(data, 0, sizeof(data));
+[e ( _memset (3 , , -> &U _data `*v -> 0 `i -> # _data `ui ]
 "59
-[; ;main.c: 59:     {
+[; ;main.c: 59:     TRISAbits.TRISA4 = 0;
+[e = . . _TRISAbits 0 4 -> -> 0 `i `uc ]
+"60
+[; ;main.c: 60:     TRISAbits.TRISA5= 0;
+[e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
+"64
+[; ;main.c: 64:     while(1)
+[e :U 1229 ]
+"65
+[; ;main.c: 65:     {
 {
-"87
-[; ;main.c: 87:         data[x] = EUSART_Read();
-[e = *U + &U _data * -> -> _x `ui `ux -> -> # *U &U _data `ui `ux ( _EUSART_Read ..  ]
-"88
-[; ;main.c: 88:         x++;
-[e ++ _x -> 1 `i ]
-"90
-[; ;main.c: 90:         if (x == 49)
-[e $ ! == _x -> 49 `i 1231  ]
-"91
-[; ;main.c: 91:         {
-{
-"92
-[; ;main.c: 92:             x = 0;
-[e = _x -> 0 `i ]
 "93
-[; ;main.c: 93:         }
+[; ;main.c: 93:         data[x] = EUSART_Read();
+[e = *U + &U _data * -> -> _x `ui `ux -> -> # *U &U _data `ui `ux ( _EUSART_Read ..  ]
+"94
+[; ;main.c: 94:         uint8_t header = 0x59;
+[v _header `uc ~T0 @X0 1 a ]
+[e = _header -> -> 89 `i `uc ]
+"95
+[; ;main.c: 95:         uint8_t zero = 0x00;
+[v _zero `uc ~T0 @X0 1 a ]
+[e = _zero -> -> 0 `i `uc ]
+"96
+[; ;main.c: 96:         x++;
+[e ++ _x -> 1 `i ]
+"98
+[; ;main.c: 98:         if (x == 8)
+[e $ ! == _x -> 8 `i 1231  ]
+"99
+[; ;main.c: 99:         {
+{
+"100
+[; ;main.c: 100:             x = 0;
+[e = _x -> 0 `i ]
+"102
+[; ;main.c: 102:             int n = 0;
+[v _n `i ~T0 @X0 1 a ]
+[e = _n -> 0 `i ]
+"104
+[; ;main.c: 104:             for (int n = 0; n < 8; n++)
+{
+[v _n `i ~T0 @X0 1 a ]
+[e = _n -> 0 `i ]
+[e $ < _n -> 8 `i 1232  ]
+[e $U 1233  ]
+[e :U 1232 ]
+"105
+[; ;main.c: 105:             {
+{
+"106
+[; ;main.c: 106:                 if ((data[n] != header) && (data[n] != zero))
+[e $ ! && != -> *U + &U _data * -> -> _n `ui `ux -> -> # *U &U _data `ui `ux `i -> _header `i != -> *U + &U _data * -> -> _n `ui `ux -> -> # *U &U _data `ui `ux `i -> _zero `i 1235  ]
+"107
+[; ;main.c: 107:                 {
+{
+"108
+[; ;main.c: 108:                     if (data[n] > 0x20)
+[e $ ! > -> *U + &U _data * -> -> _n `ui `ux -> -> # *U &U _data `ui `ux `i -> 32 `i 1236  ]
+"109
+[; ;main.c: 109:                     {
+{
+"110
+[; ;main.c: 110:                         LATAbits.LATA5 = 1;
+[e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
+"114
+[; ;main.c: 114:                         PORTAbits.RA4 = 1;
+[e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
+"115
+[; ;main.c: 115:                     }
+}
+[e $U 1237  ]
+"117
+[; ;main.c: 117:                     else
+[e :U 1236 ]
+"118
+[; ;main.c: 118:                     {
+{
+"120
+[; ;main.c: 120:                         LATAbits.LATA5 = 0;
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+"121
+[; ;main.c: 121:                         PORTAbits.RA4 = 0;
+[e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
+"122
+[; ;main.c: 122:                     }
+}
+[e :U 1237 ]
+"124
+[; ;main.c: 124:                 }
+}
+[e :U 1235 ]
+"125
+[; ;main.c: 125:             }
+}
+[e ++ _n -> 1 `i ]
+[e $ < _n -> 8 `i 1232  ]
+[e :U 1233 ]
+}
+"126
+[; ;main.c: 126:         }
 }
 [e :U 1231 ]
-"101
-[; ;main.c: 101:         if (data[1] > 0)
-[e $ ! > -> *U + &U _data * -> -> -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 0 `i 1232  ]
-"102
-[; ;main.c: 102:         {
-{
-"103
-[; ;main.c: 103:             do { LATAbits.LATA1 = 1; } while(0);
-[e :U 1235 ]
-{
-[e = . . _LATAbits 0 1 -> -> 1 `i `uc ]
-}
-[e :U 1234 ]
-"107
-[; ;main.c: 107:         }
-}
-[e :U 1232 ]
-"169
-[; ;main.c: 169:     }
+"187
+[; ;main.c: 187:     }
 }
 [e :U 1228 ]
 [e $U 1229  ]
 [e :U 1230 ]
-"171
-[; ;main.c: 171:     return (0);
+"189
+[; ;main.c: 189:     return (0);
 [e ) -> 0 `i ]
 [e $UE 1227  ]
-"172
-[; ;main.c: 172: }
+"190
+[; ;main.c: 190: }
 [e :UE 1227 ]
 }

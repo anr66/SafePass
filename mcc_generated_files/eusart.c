@@ -66,11 +66,11 @@ void EUSART_Initialize(void)
 {
     // Set the EUSART module to the options selected in the user interface.
 
-    // ABDOVF no_overflow; SCKP Non-Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
-    BAUD1CON = 0x08;
+    // ABDOVF no_overflow; SCKP Inverted; BRG16 16bit_generator; WUE disabled; ABDEN disabled; 
+    BAUD1CON = 0x18;
 
-    // SPEN enabled; RX9 9-bit; CREN enabled; ADDEN enabled; SREN disabled; 
-    RC1STA = 0xD8;
+    // SPEN enabled; RX9 8-bit; CREN enabled; ADDEN enabled; SREN disabled; 
+    RC1STA = 0x98;
 
     // TX9 8-bit; TX9D 0; SENDB sync_break_complete; TXEN disabled; SYNC asynchronous; BRGH hi_speed; CSRC slave; 
     TX1STA = 0x04;
@@ -122,12 +122,10 @@ uint8_t EUSART_Read(void)
         EUSART_FramingErrorHandler();
     }
     
-    
     if(RC1STAbits.OERR){
         eusartRxLastError.oerr = 1;
         EUSART_OverrunErrorHandler();
     }
-    
 
     if(eusartRxLastError.status){
         EUSART_ErrorHandler();

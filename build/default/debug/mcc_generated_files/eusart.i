@@ -17067,10 +17067,10 @@ void EUSART_Initialize(void)
 
 
 
-    BAUD1CON = 0x08;
+    BAUD1CON = 0x18;
 
 
-    RC1STA = 0xD8;
+    RC1STA = 0x98;
 
 
     TX1STA = 0x04;
@@ -17122,12 +17122,10 @@ uint8_t EUSART_Read(void)
         EUSART_FramingErrorHandler();
     }
 
-
     if(RC1STAbits.OERR){
         eusartRxLastError.oerr = 1;
         EUSART_OverrunErrorHandler();
     }
-
 
     if(eusartRxLastError.status){
         EUSART_ErrorHandler();

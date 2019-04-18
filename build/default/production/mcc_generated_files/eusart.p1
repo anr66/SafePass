@@ -1438,11 +1438,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _EUSART_Initialize ]
 [f ]
 "70
-[; ;mcc_generated_files/eusart.c: 70:     BAUD1CON = 0x08;
-[e = _BAUD1CON -> -> 8 `i `uc ]
+[; ;mcc_generated_files/eusart.c: 70:     BAUD1CON = 0x18;
+[e = _BAUD1CON -> -> 24 `i `uc ]
 "73
-[; ;mcc_generated_files/eusart.c: 73:     RC1STA = 0xD8;
-[e = _RC1STA -> -> 216 `i `uc ]
+[; ;mcc_generated_files/eusart.c: 73:     RC1STA = 0x98;
+[e = _RC1STA -> -> 152 `i `uc ]
 "76
 [; ;mcc_generated_files/eusart.c: 76:     TX1STA = 0x04;
 [e = _TX1STA -> -> 4 `i `uc ]

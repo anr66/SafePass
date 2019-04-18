@@ -371,19 +371,8 @@ void *memccpy (void *restrict, const void *restrict, int, size_t);
 # 17 "main.c" 2
 
 
-# 1 "./pin_manager.h" 1
-# 183 "./pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 195 "./pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 19 "main.c" 2
-
-# 1 "./spi.h" 1
-
-
-
-
-
+# 1 "./mcc_generated_files/pin_manager.h" 1
+# 54 "./mcc_generated_files/pin_manager.h"
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -17210,7 +17199,19 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 27 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\xc.h" 2 3
-# 6 "./spi.h" 2
+# 54 "./mcc_generated_files/pin_manager.h" 2
+# 142 "./mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_Initialize (void);
+# 154 "./mcc_generated_files/pin_manager.h"
+void PIN_MANAGER_IOC(void);
+# 19 "main.c" 2
+
+# 1 "./spi.h" 1
+
+
+
+
+
 
 
 typedef enum
@@ -17310,8 +17311,6 @@ void EUSART_SetErrorHandler(void (* interruptHandler)(void));
 # 1 "./mcc_generated_files/device_config.h" 1
 # 50 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/pin_manager.h" 1
-# 51 "./mcc_generated_files/mcc.h" 2
 
 
 
@@ -17365,43 +17364,68 @@ int main(int argc, char** argv)
     _delay((unsigned long)((10)*(32000000/4000.0)));
 
     EUSART_Initialize();
-
-
-
-
-
-
-
+# 54 "main.c"
     int x = 0;
-    uint8_t data[50];
+    uint8_t data[8];
+    uint8_t header_char = 0x59;
+
     memset(data, 0, sizeof(data));
+
+    TRISAbits.TRISA3 = 0;
+    TRISAbits.TRISA4 = 0;
+    TRISAbits.TRISA5= 0;
+
 
 
     while(1)
     {
-# 87 "main.c"
+# 99 "main.c"
         data[x] = EUSART_Read();
+        uint8_t header = 0x59;
+        uint8_t zero = 0x00;
+        uint8_t distance = 0x40;
         x++;
 
-        if (x == 49)
+        if (x == 8)
         {
             x = 0;
+
+            int n = 0;
+
+            for (int n = 0; n < 8; n++)
+            {
+                if ((data[n] != header) && (data[n] != zero))
+                {
+                    if((data[n - 1] == zero) && (data[n] != zero))
+                    {
+                        LATAbits.LATA5 = 0;
+                        PORTAbits.RA4 = 0;
+
+
+                    }
+
+                    else if (data[n] > distance)
+                    {
+                        LATAbits.LATA5 = 1;
+
+
+
+                        PORTAbits.RA4 = 1;
+                    }
+
+
+
+                    else
+                    {
+
+                        LATAbits.LATA5 = 0;
+                        PORTAbits.RA4 = 0;
+                    }
+
+                }
+            }
         }
-
-
-
-
-
-
-
-        if (data[1] > 0)
-        {
-            do { LATAbits.LATA1 = 1; } while(0);
-
-
-
-        }
-# 169 "main.c"
+# 204 "main.c"
     }
 
     return (0);
