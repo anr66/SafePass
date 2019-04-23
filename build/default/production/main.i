@@ -17348,7 +17348,6 @@ void OSCILLATOR_Initialize(void);
 
 int main(int argc, char** argv)
 {
-
     SYSTEM_Initialize();
     OSCILLATOR_Initialize();
 
@@ -17361,13 +17360,14 @@ int main(int argc, char** argv)
 
 
 
-    _delay((unsigned long)((10)*(32000000/4000.0)));
+
 
     EUSART_Initialize();
+    _delay((unsigned long)((10)*(32000000/4000.0)));
 # 54 "main.c"
     int x = 0;
     uint8_t data[8];
-    uint8_t header_char = 0x59;
+
 
     memset(data, 0, sizeof(data));
 
@@ -17381,51 +17381,54 @@ int main(int argc, char** argv)
     {
 # 99 "main.c"
         data[x] = EUSART_Read();
+
         uint8_t header = 0x59;
         uint8_t zero = 0x00;
-        uint8_t distance = 0x40;
+
+
+
+
+
+        uint16_t feet = 0x0299;
+
+
+
         x++;
 
         if (x == 8)
         {
             x = 0;
 
-            int n = 0;
-
             for (int n = 0; n < 8; n++)
             {
                 if ((data[n] != header) && (data[n] != zero))
                 {
+                    uint16_t distance = (data[n+1] << 8) | data[n];
+
+
                     if((data[n - 1] == zero) && (data[n] != zero))
                     {
                         LATAbits.LATA5 = 0;
                         PORTAbits.RA4 = 0;
-
-
                     }
 
-                    else if (data[n] > distance)
+
+
+                    else if (distance < feet)
                     {
+
                         LATAbits.LATA5 = 1;
-
-
-
                         PORTAbits.RA4 = 1;
                     }
 
-
-
                     else
                     {
-
                         LATAbits.LATA5 = 0;
                         PORTAbits.RA4 = 0;
                     }
-
                 }
             }
         }
-# 204 "main.c"
     }
 
     return (0);

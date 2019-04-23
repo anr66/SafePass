@@ -305,17 +305,21 @@ IDLE_LOW 0
 "28 C:\Users\Laptop\MPLABXProjects\test.X\main.c
 [v _main main `(i  1 e 2 0 ]
 {
-"104
-[v main@n_553 n `i  1 a 2 16 ]
-"95
-[v main@zero zero `uc  1 a 1 13 ]
-"94
-[v main@header header `uc  1 a 1 12 ]
+"114
+[v main@distance distance `us  1 a 2 7 ]
+"110
+[v main@n n `i  1 a 2 21 ]
+"103
+[v main@feet feet `us  1 a 2 5 ]
+"102
+[v main@zero zero `uc  1 a 1 20 ]
+"101
+[v main@header header `uc  1 a 1 9 ]
 "55
-[v main@data data `[8]uc  1 a 8 4 ]
+[v main@data data `[8]uc  1 a 8 10 ]
 "54
-[v main@x x `i  1 a 2 14 ]
-"190
+[v main@x x `i  1 a 2 18 ]
+"143
 } 0
 "4 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
 [v _memset memset `(*.4v  1 e 1 0 ]
