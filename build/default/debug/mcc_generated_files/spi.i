@@ -17046,7 +17046,7 @@ void SPI_Initialize(void)
     SSP1STAT = 0xC0;
 
 
-    SSP1CON1 = 0x20;
+    SSP1CON1 = 0x30;
 
 
     SSP1ADD = 0x00;

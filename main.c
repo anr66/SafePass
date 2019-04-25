@@ -31,6 +31,9 @@ int main(int argc, char** argv)
     // Initialize UART
     EUSART_Initialize();
     __delay_ms(10);
+    
+    SPI_Initialize();
+    __delay_ms(10);
 
     int x = 0;
     uint8_t data[8]; 
@@ -39,6 +42,9 @@ int main(int argc, char** argv)
     TRISAbits.TRISA3 = 0;
     TRISAbits.TRISA4 = 0;
     TRISAbits.TRISA5 = 0; // set pin as output
+    
+    TRISCbits.TRISC7 = 0;
+    
     
     // Begin infinite loop
     while(1)
@@ -49,10 +55,13 @@ int main(int argc, char** argv)
         uint8_t  zero = 0x00;
         
         // 32 cm
-        //uint16_t feet = 0x0020;
+        uint16_t feet = 0x0040;
         
+        uint8_t spi_data = 0x29;
+        
+        SPI_Exchange8bit(spi_data);
         // 20 ft
-        uint16_t feet = 0x0299;
+        //uint16_t feet = 0x0299;
         
         // 365 ft
         //uint16_t feet = 0x2A62;
@@ -73,6 +82,9 @@ int main(int argc, char** argv)
                     {
                         LATAbits.LATA5 = 0;
                         PORTAbits.RA4 = 0;
+                        PORTCbits.RC7 = 0;
+                        
+                       
                     }
                     
                     
@@ -82,12 +94,15 @@ int main(int argc, char** argv)
                     
                         LATAbits.LATA5 = 1;
                         PORTAbits.RA4 = 1;
+                        PORTCbits.RC7 = 1;
                     }   
            
                     else
                     {
                         LATAbits.LATA5 = 0;
                         PORTAbits.RA4 = 0;
+                        PORTCbits.RC7 = 0;
+                                
                     }   
                 }          
             }           

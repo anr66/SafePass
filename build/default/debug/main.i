@@ -7,7 +7,13 @@
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 14 "main.c"
+
+
+
+
+
+
+
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdio.h" 1 3
 
 
@@ -163,7 +169,7 @@ char *ctermid(char *);
 
 
 char *tempnam(const char *, const char *);
-# 14 "main.c" 2
+# 8 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 1 3
 # 21 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 3
@@ -226,7 +232,7 @@ udiv_t udiv (unsigned int, unsigned int);
 uldiv_t uldiv (unsigned long, unsigned long);
 # 104 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdlib.h" 3
 size_t __ctype_get_mb_cur_max(void);
-# 15 "main.c" 2
+# 9 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 3
@@ -311,7 +317,7 @@ typedef int32_t int_fast32_t;
 typedef uint32_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 155 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\stdint.h" 2 3
-# 16 "main.c" 2
+# 10 "main.c" 2
 
 # 1 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 1 3
 # 25 "C:\\Program Files (x86)\\Microchip\\xc8\\v2.05\\pic\\include\\c99\\string.h" 3
@@ -368,8 +374,7 @@ size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
 
 
 void *memccpy (void *restrict, const void *restrict, int, size_t);
-# 17 "main.c" 2
-
+# 11 "main.c" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
 # 54 "./mcc_generated_files/pin_manager.h"
@@ -17204,7 +17209,7 @@ extern __bank0 __bit __timeout;
 void PIN_MANAGER_Initialize (void);
 # 154 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 19 "main.c" 2
+# 12 "main.c" 2
 
 # 1 "./spi.h" 1
 
@@ -17267,8 +17272,7 @@ char spiRead(){
         return SSPBUF;
     }
 }
-# 20 "main.c" 2
-
+# 13 "main.c" 2
 
 # 1 "./mcc_generated_files/eusart.h" 1
 # 55 "./mcc_generated_files/eusart.h"
@@ -17304,7 +17308,7 @@ void EUSART_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 398 "./mcc_generated_files/eusart.h"
 void EUSART_SetErrorHandler(void (* interruptHandler)(void));
-# 22 "main.c" 2
+# 14 "main.c" 2
 
 # 1 "./mcc_generated_files/mcc.h" 1
 # 50 "./mcc_generated_files/mcc.h"
@@ -17340,7 +17344,7 @@ void SPI_ClearWriteCollisionStatus(void);
 void SYSTEM_Initialize(void);
 # 83 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 23 "main.c" 2
+# 15 "main.c" 2
 
 
 
@@ -17348,9 +17352,9 @@ void OSCILLATOR_Initialize(void);
 
 int main(int argc, char** argv)
 {
+
     SYSTEM_Initialize();
     OSCILLATOR_Initialize();
-
 
 
     PIN_MANAGER_Initialize();
@@ -17358,33 +17362,42 @@ int main(int argc, char** argv)
 
 
 
-
-
-
-
     EUSART_Initialize();
     _delay((unsigned long)((10)*(32000000/4000.0)));
-# 54 "main.c"
+
+    SPI_Initialize();
+    _delay((unsigned long)((10)*(32000000/4000.0)));
+
     int x = 0;
     uint8_t data[8];
-
-
     memset(data, 0, sizeof(data));
 
     TRISAbits.TRISA3 = 0;
     TRISAbits.TRISA4 = 0;
-    TRISAbits.TRISA5= 0;
+    TRISAbits.TRISA5 = 0;
+
+    TRISCbits.TRISC7 = 0;
 
 
 
     while(1)
     {
-# 99 "main.c"
         data[x] = EUSART_Read();
 
         uint8_t header = 0x59;
         uint8_t zero = 0x00;
-        uint16_t feet = 0x0262;
+
+
+        uint16_t feet = 0x0040;
+
+        uint8_t spi_data = 0x29;
+
+        SPI_Exchange8bit(spi_data);
+
+
+
+
+
         x++;
 
         if (x == 8)
@@ -17402,6 +17415,9 @@ int main(int argc, char** argv)
                     {
                         LATAbits.LATA5 = 0;
                         PORTAbits.RA4 = 0;
+                        PORTCbits.RC7 = 0;
+
+
                     }
 
 
@@ -17411,12 +17427,15 @@ int main(int argc, char** argv)
 
                         LATAbits.LATA5 = 1;
                         PORTAbits.RA4 = 1;
+                        PORTCbits.RC7 = 1;
                     }
 
                     else
                     {
                         LATAbits.LATA5 = 0;
                         PORTAbits.RA4 = 0;
+                        PORTCbits.RC7 = 0;
+
                     }
                 }
             }

@@ -11,38 +11,39 @@
 # All addresses and the length are given in unqualified hexadecimal
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
-$C:\Users\Laptop\AppData\Local\Temp\s8c8.o
+$C:\Users\Laptop\AppData\Local\Temp\sc0s.o
 reset_vec CODE 0 0 0 2 2
 end_init CODE 0 2 2 2 2
 config CONFIG 0 8007 8007 3 2
 $dist/default/production\test.X.production.o
 cinit CODE 0 7F6 7F6 A 2
-text1 CODE 0 6B6 6B6 95 2
-text2 CODE 0 634 634 C 2
-text3 CODE 0 623 623 7 2
-text4 CODE 0 685 685 31 2
-text5 CODE 0 62A 62A A 2
-text6 CODE 0 640 640 21 2
-text7 CODE 0 617 617 6 2
-text8 CODE 0 611 611 6 2
-text9 CODE 0 60B 60B 6 2
-text10 CODE 0 661 661 24 2
-text11 CODE 0 607 607 4 2
-text12 CODE 0 606 606 1 2
-text13 CODE 0 605 605 1 2
-maintext CODE 0 74B 74B AB 2
+text1 CODE 0 6A2 6A2 95 2
+text2 CODE 0 620 620 C 2
+text3 CODE 0 606 606 7 2
+text4 CODE 0 671 671 31 2
+text5 CODE 0 616 616 A 2
+text6 CODE 0 62C 62C 21 2
+text7 CODE 0 5FA 5FA 6 2
+text8 CODE 0 5F4 5F4 6 2
+text9 CODE 0 5EE 5EE 6 2
+text10 CODE 0 60D 60D 9 2
+text11 CODE 0 64D 64D 24 2
+text12 CODE 0 5EA 5EA 4 2
+text13 CODE 0 5E9 5E9 1 2
+text14 CODE 0 5E8 5E8 1 2
+maintext CODE 0 737 737 BF 2
 cstackCOMMON COMMON 1 70 70 E 1
-cstackBANK0 BANK0 1 4F 4F 17 1
+cstackBANK0 BANK0 1 4F 4F 18 1
 stringtext1 STRCODE 0 800 800 32 2
 bssBANK0 BANK0 1 20 20 2F 1
-clrtext CODE 0 61D 61D 6 2
+clrtext CODE 0 600 600 6 2
 # %UNUSED Section
 # This section enumerates the unused ranges of each CLASS. Each entry
 # is described on a single line as follows:
 #    <class name> <range> <delta>
 # Addresses given in the range are in hexadecimal and units of delta.
 %UNUSED
-RAM 66-6F 1
+RAM 67-6F 1
 RAM A0-EF 1
 RAM 120-16F 1
 RAM 1A0-1EF 1
@@ -55,7 +56,7 @@ RAM 4A0-4EF 1
 RAM 520-56F 1
 RAM 5A0-5EF 1
 RAM 620-64F 1
-BANK0 66-6F 1
+BANK0 67-6F 1
 BANK1 A0-EF 1
 BANK2 120-16F 1
 BANK3 1A0-1EF 1
@@ -65,9 +66,9 @@ BANK6 320-36F 1
 BANK7 3A0-3EF 1
 BANK8 420-46F 1
 BANK9 4A0-4EF 1
-CONST 4-604 2
+CONST 4-5E7 2
 CONST 832-1FFF 2
-ENTRY 4-604 2
+ENTRY 4-5E7 2
 ENTRY 832-1FFF 2
 IDLOC 8000-8003 2
 SFR10 500-51F 1
@@ -92,8 +93,8 @@ SFR28 E00-E6F 1
 SFR29 E80-EEF 1
 SFR30 F00-F6F 1
 SFR31 F80-FEF 1
-STACK 2046-23EF 1
-CODE 4-604 2
+STACK 2047-23EF 1
+CODE 4-5E7 2
 CODE 832-1FFF 2
 SFR0 0-1F 1
 SFR1 80-9F 1
@@ -109,9 +110,9 @@ BANK10 520-56F 1
 BANK11 5A0-5EF 1
 BANK12 620-64F 1
 BIGRAM 2000-23EF 1
-STRCODE 4-604 2
+STRCODE 4-5E7 2
 STRCODE 832-1FFF 2
-STRING 4-604 2
+STRING 4-5E7 2
 STRING 832-1FFF 2
 # %LINETAB Section
 # This section enumerates the file/line to address mappings.
@@ -127,160 +128,173 @@ STRING 832-1FFF 2
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\test.X.production.o
-7F6 cinit CODE >6537:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7F6 cinit CODE >6540:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7F6 cinit CODE >6588:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7F7 cinit CODE >6589:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7F8 cinit CODE >6590:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7F9 cinit CODE >6591:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7FA cinit CODE >6592:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7FB cinit CODE >6593:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7FD cinit CODE >6599:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7FD cinit CODE >6601:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-7FE cinit CODE >6602:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-605 text13 CODE >159:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-605 text13 CODE >160:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-606 text12 CODE >149:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-607 text11 CODE >151:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-607 text11 CODE >154:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-609 text11 CODE >155:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-60A text11 CODE >157:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-661 text10 CODE >112:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-661 text10 CODE >114:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-661 text10 CODE >116:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-664 text10 CODE >118:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-665 text10 CODE >120:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-668 text10 CODE >121:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-66A text10 CODE >122:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-66F text10 CODE >125:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-672 text10 CODE >126:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-674 text10 CODE >127:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-679 text10 CODE >130:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-67D text10 CODE >131:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-682 text10 CODE >134:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-684 text10 CODE >135:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-60B text9 CODE >170:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-60B text9 CODE >171:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-610 text9 CODE >172:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-611 text8 CODE >162:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-611 text8 CODE >163:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-616 text8 CODE >164:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-617 text7 CODE >166:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-617 text7 CODE >167:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-61C text7 CODE >168:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-640 text6 CODE >65:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-640 text6 CODE >70:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-643 text6 CODE >73:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-645 text6 CODE >76:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-647 text6 CODE >79:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-649 text6 CODE >82:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-64A text6 CODE >85:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-651 text6 CODE >86:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-658 text6 CODE >87:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-65E text6 CODE >89:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-660 text6 CODE >91:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
-62A text5 CODE >58:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-62A text5 CODE >61:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-62D text5 CODE >63:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-62E text5 CODE >65:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-630 text5 CODE >67:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-630 text5 CODE >69:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-685 text4 CODE >55:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-685 text4 CODE >60:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-687 text4 CODE >61:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-688 text4 CODE >62:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-689 text4 CODE >67:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-68C text4 CODE >68:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-68E text4 CODE >69:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-690 text4 CODE >74:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-693 text4 CODE >75:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-695 text4 CODE >76:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-697 text4 CODE >81:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-699 text4 CODE >82:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-69A text4 CODE >83:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-69B text4 CODE >84:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-69D text4 CODE >89:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-69F text4 CODE >90:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6A0 text4 CODE >91:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6A1 text4 CODE >96:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6A4 text4 CODE >97:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6A6 text4 CODE >98:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6A8 text4 CODE >107:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6AB text4 CODE >108:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6AD text4 CODE >109:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6B0 text4 CODE >110:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6B2 text4 CODE >111:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-6B5 text4 CODE >112:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
-623 text3 CODE >65:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
-623 text3 CODE >70:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
-626 text3 CODE >73:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
-628 text3 CODE >76:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
-629 text3 CODE >77:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
-634 text2 CODE >50:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-634 text2 CODE >52:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-637 text2 CODE >53:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-63A text2 CODE >54:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-63D text2 CODE >55:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-63F text2 CODE >56:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
-6B6 text1 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6B7 text1 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6BB text1 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6BF text1 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6C6 text1 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6D1 text1 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6D8 text1 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6DF text1 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6E7 text1 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6F2 text1 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-6FD text1 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-704 text1 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-70C text1 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-717 text1 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-71E text1 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-72B text1 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-72F text1 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-733 text1 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-737 text1 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
-74B maintext CODE >28:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-74B maintext CODE >30:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-74E maintext CODE >31:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-751 maintext CODE >35:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-754 maintext CODE >36:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-75D maintext CODE >44:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-760 maintext CODE >45:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-769 maintext CODE >54:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-76C maintext CODE >58:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-777 maintext CODE >60:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-779 maintext CODE >61:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-77A maintext CODE >62:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-77B maintext CODE >99:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-786 maintext CODE >101:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-78A maintext CODE >102:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-78B maintext CODE >108:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-78F maintext CODE >112:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-793 maintext CODE >114:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-798 maintext CODE >116:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-79A maintext CODE >118:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-79C maintext CODE >120:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7AD maintext CODE >122:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7C5 maintext CODE >125:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7D5 maintext CODE >127:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7D6 maintext CODE >133:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7DE maintext CODE >136:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7E0 maintext CODE >137:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7E2 maintext CODE >138:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7E3 maintext CODE >140:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7E3 maintext CODE >142:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7E5 maintext CODE >143:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-7E7 maintext CODE >146:C:\Users\Laptop\MPLABXProjects\test.X\main.c
-61D clrtext CODE >6577:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-61D clrtext CODE >6578:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-61E clrtext CODE >6579:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-61E clrtext CODE >6580:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-61F clrtext CODE >6581:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-620 clrtext CODE >6582:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-621 clrtext CODE >6583:C:\Users\Laptop\AppData\Local\Temp\s8c8.
-622 clrtext CODE >6584:C:\Users\Laptop\AppData\Local\Temp\s8c8.
+7F6 cinit CODE >6543:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7F6 cinit CODE >6546:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7F6 cinit CODE >6594:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7F7 cinit CODE >6595:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7F8 cinit CODE >6596:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7F9 cinit CODE >6597:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7FA cinit CODE >6598:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7FB cinit CODE >6599:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7FD cinit CODE >6605:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7FD cinit CODE >6607:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+7FE cinit CODE >6608:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+5E8 text14 CODE >159:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5E8 text14 CODE >160:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5E9 text13 CODE >149:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5EA text12 CODE >151:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5EA text12 CODE >154:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5EC text12 CODE >155:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5ED text12 CODE >157:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+64D text11 CODE >112:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+64D text11 CODE >114:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+64D text11 CODE >116:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+650 text11 CODE >118:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+651 text11 CODE >120:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+654 text11 CODE >121:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+656 text11 CODE >122:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+65B text11 CODE >125:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+65E text11 CODE >126:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+660 text11 CODE >127:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+665 text11 CODE >130:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+669 text11 CODE >131:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+66E text11 CODE >134:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+670 text11 CODE >135:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+60D text10 CODE >79:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+60E text10 CODE >82:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+610 text10 CODE >84:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+612 text10 CODE >86:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+612 text10 CODE >88:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+614 text10 CODE >90:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+615 text10 CODE >91:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+5EE text9 CODE >170:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5EE text9 CODE >171:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5F3 text9 CODE >172:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5F4 text8 CODE >162:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5F4 text8 CODE >163:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5F9 text8 CODE >164:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5FA text7 CODE >166:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5FA text7 CODE >167:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+5FF text7 CODE >168:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+62C text6 CODE >65:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+62C text6 CODE >70:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+62F text6 CODE >73:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+631 text6 CODE >76:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+633 text6 CODE >79:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+635 text6 CODE >82:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+636 text6 CODE >85:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+63D text6 CODE >86:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+644 text6 CODE >87:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+64A text6 CODE >89:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+64C text6 CODE >91:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/eusart.c
+616 text5 CODE >58:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+616 text5 CODE >61:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+619 text5 CODE >63:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+61A text5 CODE >65:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+61C text5 CODE >67:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+61C text5 CODE >69:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+671 text4 CODE >55:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+671 text4 CODE >60:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+673 text4 CODE >61:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+674 text4 CODE >62:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+675 text4 CODE >67:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+678 text4 CODE >68:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+67A text4 CODE >69:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+67C text4 CODE >74:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+67F text4 CODE >75:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+681 text4 CODE >76:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+683 text4 CODE >81:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+685 text4 CODE >82:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+686 text4 CODE >83:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+687 text4 CODE >84:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+689 text4 CODE >89:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+68B text4 CODE >90:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+68C text4 CODE >91:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+68D text4 CODE >96:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+690 text4 CODE >97:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+692 text4 CODE >98:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+694 text4 CODE >107:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+697 text4 CODE >108:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+699 text4 CODE >109:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+69C text4 CODE >110:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+69E text4 CODE >111:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+6A1 text4 CODE >112:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/pin_manager.c
+606 text3 CODE >65:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+606 text3 CODE >70:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+609 text3 CODE >73:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+60B text3 CODE >76:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+60C text3 CODE >77:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/spi.c
+620 text2 CODE >50:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+620 text2 CODE >52:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+623 text2 CODE >53:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+626 text2 CODE >54:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+629 text2 CODE >55:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+62B text2 CODE >56:C:\Users\Laptop\MPLABXProjects\test.X\mcc_generated_files/mcc.c
+6A2 text1 CODE >4:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6A3 text1 CODE >6:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6A7 text1 CODE >13:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6AB text1 CODE >14:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6B2 text1 CODE >15:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6BD text1 CODE >16:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6C4 text1 CODE >17:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6CB text1 CODE >18:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6D3 text1 CODE >19:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6DE text1 CODE >20:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6E9 text1 CODE >21:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6F0 text1 CODE >22:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+6F8 text1 CODE >23:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+703 text1 CODE >24:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+70A text1 CODE >31:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+717 text1 CODE >32:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+71B text1 CODE >33:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+71F text1 CODE >34:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+723 text1 CODE >86:C:\Program Files (x86)\Microchip\xc8\v2.05\pic\sources\c99\common\memset.c
+737 maintext CODE >20:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+737 maintext CODE >23:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+73A maintext CODE >24:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+73D maintext CODE >27:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+740 maintext CODE >28:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+749 maintext CODE >32:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+74C maintext CODE >33:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+755 maintext CODE >35:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+758 maintext CODE >36:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+761 maintext CODE >38:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+764 maintext CODE >40:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+76F maintext CODE >42:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+771 maintext CODE >43:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+772 maintext CODE >44:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+773 maintext CODE >46:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+774 maintext CODE >52:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+77F maintext CODE >54:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+783 maintext CODE >55:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+784 maintext CODE >58:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+788 maintext CODE >62:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+78C maintext CODE >68:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+791 maintext CODE >70:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+796 maintext CODE >72:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+798 maintext CODE >74:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+79A maintext CODE >76:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7AB maintext CODE >78:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7C3 maintext CODE >81:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7D3 maintext CODE >83:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7D4 maintext CODE >92:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7DC maintext CODE >95:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7DE maintext CODE >96:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7E0 maintext CODE >97:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7E1 maintext CODE >98:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7E2 maintext CODE >100:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7E2 maintext CODE >102:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7E4 maintext CODE >103:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7E6 maintext CODE >104:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+7E7 maintext CODE >108:C:\Users\Laptop\MPLABXProjects\test.X\main.c
+600 clrtext CODE >6583:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+600 clrtext CODE >6584:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+601 clrtext CODE >6585:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+601 clrtext CODE >6586:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+602 clrtext CODE >6587:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+603 clrtext CODE >6588:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+604 clrtext CODE >6589:C:\Users\Laptop\AppData\Local\Temp\sc0s.
+605 clrtext CODE >6590:C:\Users\Laptop\AppData\Local\Temp\sc0s.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -294,7 +308,7 @@ $dist/default/production\test.X.production.o
 # is the name of the object file in which the symbol was defined.
 %SYMTAB
 ___latbits 2 0 ABS 0 - dist/default/production\test.X.production.o
-_EUSART_Read CC2 0 CODE 0 text10 dist/default/production\test.X.production.o
+_EUSART_Read C9A 0 CODE 0 text11 dist/default/production\test.X.production.o
 __Hspace_0 800A 0 ABS 0 - -
 __Hspace_1 7E 0 ABS 0 - -
 __Hspace_2 0 0 ABS 0 - -
@@ -303,8 +317,8 @@ _SSP1STATbits 214 0 ABS 0 - dist/default/production\test.X.production.o
 __Heeprom_data 0 0 EEDATA 3 eeprom_data -
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
 _BF 10A0 0 ABS 0 - dist/default/production\test.X.production.o
-main@n 64 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
-main@x 61 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
+main@n 65 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
+main@x 62 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
 __Hstrings 0 0 ABS 0 strings -
 _LATA 10C 0 ABS 0 - dist/default/production\test.X.production.o
 _LATB 10D 0 ABS 0 - dist/default/production\test.X.production.o
@@ -313,31 +327,31 @@ _PLLR 4D6 0 ABS 0 - dist/default/production\test.X.production.o
 _WPUA 20C 0 ABS 0 - dist/default/production\test.X.production.o
 _WPUB 20D 0 ABS 0 - dist/default/production\test.X.production.o
 _WPUC 20E 0 ABS 0 - dist/default/production\test.X.production.o
-___sp 0 0 STACK 2 stack C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-_main E96 0 CODE 0 maintext dist/default/production\test.X.production.o
+___sp 0 0 STACK 2 stack C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+_main E6E 0 CODE 0 maintext dist/default/production\test.X.production.o
 _uart 1000 0 STRCODE 0 stringtext1 dist/default/production\test.X.production.o
 btemp 7E 0 ABS 0 - dist/default/production\test.X.production.o
-start 4 0 CODE 0 init C:\Users\Laptop\AppData\Local\Temp\s8c8.o
+start 4 0 CODE 0 init C:\Users\Laptop\AppData\Local\Temp\sc0s.o
 _EUSART_Write 0 0 ABS 0 - dist/default/production\test.X.production.o
 __size_of_main 0 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_EUSART_SetFramingErrorHandler C2E 0 CODE 0 text8 dist/default/production\test.X.production.o
-__end_of_EUSART_SetOverrunErrorHandler C3A 0 CODE 0 text7 dist/default/production\test.X.production.o
+__end_of_EUSART_SetFramingErrorHandler BF4 0 CODE 0 text8 dist/default/production\test.X.production.o
+__end_of_EUSART_SetOverrunErrorHandler C00 0 CODE 0 text7 dist/default/production\test.X.production.o
 _OPTION_REGbits 95 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_EUSART_Initialize CC2 0 CODE 0 text6 dist/default/production\test.X.production.o
+__end_of_EUSART_Initialize C9A 0 CODE 0 text6 dist/default/production\test.X.production.o
 __Hpowerup 0 0 CODE 0 powerup -
 __size_of_SYSTEM_Initialize 0 0 ABS 0 - dist/default/production\test.X.production.o
-intlevel0 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-intlevel1 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-intlevel2 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-intlevel3 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-intlevel4 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-intlevel5 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\s8c8.o
+intlevel0 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+intlevel1 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+intlevel2 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+intlevel3 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+intlevel4 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+intlevel5 0 0 ENTRY 0 functab C:\Users\Laptop\AppData\Local\Temp\sc0s.o
 _EUSART_is_tx_ready 0 0 ABS 0 - dist/default/production\test.X.production.o
 wtemp0 7E 0 ABS 0 - dist/default/production\test.X.production.o
 __Hfunctab 0 0 ENTRY 0 functab -
 _RC1STAbits 19D 0 ABS 0 - dist/default/production\test.X.production.o
-_EUSART_DefaultFramingErrorHandler C0C 0 CODE 0 text12 dist/default/production\test.X.production.o
-_EUSART_DefaultOverrunErrorHandler C0E 0 CODE 0 text11 dist/default/production\test.X.production.o
+_EUSART_DefaultFramingErrorHandler BD2 0 CODE 0 text13 dist/default/production\test.X.production.o
+_EUSART_DefaultOverrunErrorHandler BD4 0 CODE 0 text12 dist/default/production\test.X.production.o
 __Hclrtext 0 0 ABS 0 clrtext -
 __size_of_SPI_Initialize 0 0 ABS 0 - dist/default/production\test.X.production.o
 _ANSELA 18C 0 ABS 0 - dist/default/production\test.X.production.o
@@ -346,29 +360,30 @@ _ANSELC 18E 0 ABS 0 - dist/default/production\test.X.production.o
 _BORCON 116 0 ABS 0 - dist/default/production\test.X.production.o
 __Lmaintext 0 0 ABS 0 maintext -
 main@distance 56 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
-___stackhi 23EF 0 ABS 0 - C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-___stacklo 2046 0 ABS 0 - C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-_EUSART_Initialize C80 0 CODE 0 text6 dist/default/production\test.X.production.o
+___stackhi 23EF 0 ABS 0 - C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+___stacklo 2047 0 ABS 0 - C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+_EUSART_Initialize C58 0 CODE 0 text6 dist/default/production\test.X.production.o
 _EUSART_is_rx_ready 0 0 ABS 0 - dist/default/production\test.X.production.o
-_PIN_MANAGER_Initialize D0A 0 CODE 0 text4 dist/default/production\test.X.production.o
+_PIN_MANAGER_Initialize CE2 0 CODE 0 text4 dist/default/production\test.X.production.o
 start_initialization FEC 0 CODE 0 cinit dist/default/production\test.X.production.o
 _ODCONA 28C 0 ABS 0 - dist/default/production\test.X.production.o
 _ODCONB 28D 0 ABS 0 - dist/default/production\test.X.production.o
 _ODCONC 28E 0 ABS 0 - dist/default/production\test.X.production.o
-_EUSART_SetErrorHandler C16 0 CODE 0 text9 dist/default/production\test.X.production.o
+_EUSART_SetErrorHandler BDC 0 CODE 0 text9 dist/default/production\test.X.production.o
 _OSCCON 99 0 ABS 0 - dist/default/production\test.X.production.o
 _TRISAbits 8C 0 ABS 0 - dist/default/production\test.X.production.o
+_TRISCbits 8E 0 ABS 0 - dist/default/production\test.X.production.o
 EUSART_SetOverrunErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\test.X.production.o
-__end_of_EUSART_DefaultErrorHandler C0C 0 CODE 0 text13 dist/default/production\test.X.production.o
+__end_of_EUSART_DefaultErrorHandler BD2 0 CODE 0 text14 dist/default/production\test.X.production.o
 _RB6PPS E9E 0 ABS 0 - dist/default/production\test.X.production.o
 _RB7PPS E9F 0 ABS 0 - dist/default/production\test.X.production.o
 _RC1REG 199 0 ABS 0 - dist/default/production\test.X.production.o
 _RC1STA 19D 0 ABS 0 - dist/default/production\test.X.production.o
 __size_of_EUSART_SetFramingErrorHandler 0 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_memset E96 0 CODE 0 text1 dist/default/production\test.X.production.o
+__end_of_memset E6E 0 CODE 0 text1 dist/default/production\test.X.production.o
 __size_of_EUSART_SetOverrunErrorHandler 0 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_SYSTEM_Initialize C80 0 CODE 0 text2 dist/default/production\test.X.production.o
-clear_ram0 C3A 0 CODE 0 clrtext dist/default/production\test.X.production.o
+__end_of_SYSTEM_Initialize C58 0 CODE 0 text2 dist/default/production\test.X.production.o
+clear_ram0 C00 0 CODE 0 clrtext dist/default/production\test.X.production.o
 _SPBRGH 19C 0 ABS 0 - dist/default/production\test.X.production.o
 _SPBRGL 19B 0 ABS 0 - dist/default/production\test.X.production.o
 __pcstackBANK0 4F 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
@@ -378,10 +393,10 @@ _TRISC3 473 0 ABS 0 - dist/default/production\test.X.production.o
 _TRISC5 475 0 ABS 0 - dist/default/production\test.X.production.o
 _TX1REG 19A 0 ABS 0 - dist/default/production\test.X.production.o
 _TX1STA 19E 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_EUSART_DefaultFramingErrorHandler C0E 0 CODE 0 text12 dist/default/production\test.X.production.o
-__end_of_EUSART_DefaultOverrunErrorHandler C16 0 CODE 0 text11 dist/default/production\test.X.production.o
-___int_sp 0 0 STACK 2 stack C:\Users\Laptop\AppData\Local\Temp\s8c8.o
-__end_of_EUSART_Read D0A 0 CODE 0 text10 dist/default/production\test.X.production.o
+__end_of_EUSART_DefaultFramingErrorHandler BD4 0 CODE 0 text13 dist/default/production\test.X.production.o
+__end_of_EUSART_DefaultOverrunErrorHandler BDC 0 CODE 0 text12 dist/default/production\test.X.production.o
+___int_sp 0 0 STACK 2 stack C:\Users\Laptop\AppData\Local\Temp\sc0s.o
+__end_of_EUSART_Read CE2 0 CODE 0 text11 dist/default/production\test.X.production.o
 __Hbank0 0 0 ABS 0 bank0 -
 __Hbank1 0 0 ABS 0 bank1 -
 __Hbank2 0 0 ABS 0 bank2 -
@@ -482,7 +497,9 @@ __Lsfr29 0 0 ABS 0 sfr29 -
 __Lsfr30 0 0 ABS 0 sfr30 -
 __Lsfr31 0 0 ABS 0 sfr31 -
 __Lstack 0 0 STACK 2 stack -
+_SPI_Exchange8bit C1A 0 CODE 0 text10 dist/default/production\test.X.production.o
 _PORTAbits C 0 ABS 0 - dist/default/production\test.X.production.o
+_PORTCbits E 0 ABS 0 - dist/default/production\test.X.production.o
 __Habs1 0 0 ABS 0 abs1 -
 __Hcode 0 0 ABS 0 code -
 __Hinit 4 0 CODE 0 init -
@@ -527,22 +544,23 @@ __S0 800A 0 ABS 0 - -
 __S1 7E 0 ABS 0 - -
 __S2 0 0 ABS 0 - -
 __CFG_PLLEN$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
-_SYSTEM_Initialize C68 0 CODE 0 text2 dist/default/production\test.X.production.o
+_SYSTEM_Initialize C40 0 CODE 0 text2 dist/default/production\test.X.production.o
 __CFG_BOREN$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
 __Lintentry 4 0 CODE 0 intentry -
-reset_vec 0 0 CODE 0 reset_vec C:\Users\Laptop\AppData\Local\Temp\s8c8.o
+reset_vec 0 0 CODE 0 reset_vec C:\Users\Laptop\AppData\Local\Temp\sc0s.o
 __LbssBANK0 0 0 ABS 0 bssBANK0 -
 __CFG_FCMEN$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
 __Lstringtext1 0 0 ABS 0 stringtext1 -
 __Lstringtext2 0 0 ABS 0 stringtext2 -
 EUSART_SetFramingErrorHandler@interruptHandler 70 0 COMMON 1 cstackCOMMON dist/default/production\test.X.production.o
-_memset D6C 0 CODE 0 text1 dist/default/production\test.X.production.o
-__ptext10 CC2 0 CODE 0 text10 dist/default/production\test.X.production.o
-__ptext11 C0E 0 CODE 0 text11 dist/default/production\test.X.production.o
-__ptext12 C0C 0 CODE 0 text12 dist/default/production\test.X.production.o
-__ptext13 C0A 0 CODE 0 text13 dist/default/production\test.X.production.o
+_memset D44 0 CODE 0 text1 dist/default/production\test.X.production.o
+__ptext10 C1A 0 CODE 0 text10 dist/default/production\test.X.production.o
+__ptext11 C9A 0 CODE 0 text11 dist/default/production\test.X.production.o
+__ptext12 BD4 0 CODE 0 text12 dist/default/production\test.X.production.o
+__ptext13 BD2 0 CODE 0 text13 dist/default/production\test.X.production.o
+__ptext14 BD0 0 CODE 0 text14 dist/default/production\test.X.production.o
 __size_of_EUSART_DefaultErrorHandler 0 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_PIN_MANAGER_Initialize D6C 0 CODE 0 text4 dist/default/production\test.X.production.o
+__end_of_PIN_MANAGER_Initialize D44 0 CODE 0 text4 dist/default/production\test.X.production.o
 __Lbank10 0 0 ABS 0 bank10 -
 __Lbank11 0 0 ABS 0 bank11 -
 __Lbank12 0 0 ABS 0 bank12 -
@@ -565,23 +583,26 @@ __Lbank28 0 0 BANK28 1 bank28 -
 __Lbank29 0 0 BANK29 1 bank29 -
 __Lbank30 0 0 BANK30 1 bank30 -
 __Lbank31 0 0 BANK31 1 bank31 -
-__pmaintext E96 0 CODE 0 maintext dist/default/production\test.X.production.o
+__pmaintext E6E 0 CODE 0 maintext dist/default/production\test.X.production.o
 __Lbigram 0 0 ABS 0 bigram -
 __CFG_BORV$LO 0 0 ABS 0 - dist/default/production\test.X.production.o
-_SPI_Initialize C46 0 CODE 0 text3 dist/default/production\test.X.production.o
-__end_of_EUSART_SetErrorHandler C22 0 CODE 0 text9 dist/default/production\test.X.production.o
+_SPI_Initialize C0C 0 CODE 0 text3 dist/default/production\test.X.production.o
+__end_of_SPI_Exchange8bit C2C 0 CODE 0 text10 dist/default/production\test.X.production.o
+__end_of_EUSART_SetErrorHandler BE8 0 CODE 0 text9 dist/default/production\test.X.production.o
 __Lcommon 0 0 ABS 0 common -
 __Lconfig 1000E 0 CONFIG 0 config -
 __CFG_CP$OFF 0 0 ABS 0 - dist/default/production\test.X.production.o
 __CFG_IESO$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
 __CFG_WDTE$OFF 0 0 ABS 0 - dist/default/production\test.X.production.o
 _LATAbits 10C 0 ABS 0 - dist/default/production\test.X.production.o
-main@data 59 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
+__size_of_SPI_Exchange8bit 0 0 ABS 0 - dist/default/production\test.X.production.o
+main@data 5A 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
 main@feet 54 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
-main@zero 63 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
+main@zero 64 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
 __size_of_EUSART_Read 0 0 ABS 0 - dist/default/production\test.X.production.o
 _EUSART_FramingErrorHandler 2C 0 BANK0 1 bssBANK0 dist/default/production\test.X.production.o
 _EUSART_OverrunErrorHandler 2A 0 BANK0 1 bssBANK0 dist/default/production\test.X.production.o
+SPI_Exchange8bit@data 70 0 COMMON 1 cstackCOMMON dist/default/production\test.X.production.o
 _OSCTUNE 98 0 ABS 0 - dist/default/production\test.X.production.o
 _EUSART_ErrorHandler 28 0 BANK0 1 bssBANK0 dist/default/production\test.X.production.o
 __Lspace_0 0 0 ABS 0 - -
@@ -592,17 +613,17 @@ __size_of_memset 0 0 ABS 0 - dist/default/production\test.X.production.o
 __HcstackBANK0 0 0 ABS 0 cstackBANK0 -
 _PIR1bits 10 0 ABS 0 - dist/default/production\test.X.production.o
 __Lend_init 4 0 CODE 0 end_init -
-_EUSART_DefaultErrorHandler C0A 0 CODE 0 text13 dist/default/production\test.X.production.o
+_EUSART_DefaultErrorHandler BD0 0 CODE 0 text14 dist/default/production\test.X.production.o
 __CFG_LVP$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
 __LcstackCOMMON 0 0 ABS 0 cstackCOMMON -
-_EUSART_SetFramingErrorHandler C22 0 CODE 0 text8 dist/default/production\test.X.production.o
+_EUSART_SetFramingErrorHandler BE8 0 CODE 0 text8 dist/default/production\test.X.production.o
 __CFG_ZCD$OFF 0 0 ABS 0 - dist/default/production\test.X.production.o
-_EUSART_SetOverrunErrorHandler C2E 0 CODE 0 text7 dist/default/production\test.X.production.o
+_EUSART_SetOverrunErrorHandler BF4 0 CODE 0 text7 dist/default/production\test.X.production.o
 end_of_initialization FFA 0 CODE 0 cinit dist/default/production\test.X.production.o
 __Hintentry 4 0 CODE 0 intentry -
 __CFG_STVREN$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
 _TX1STAbits 19E 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_SPI_Initialize C54 0 CODE 0 text3 dist/default/production\test.X.production.o
+__end_of_SPI_Initialize C1A 0 CODE 0 text3 dist/default/production\test.X.production.o
 __Lstrings 0 0 ABS 0 strings -
 main@header 58 0 BANK0 1 cstackBANK0 dist/default/production\test.X.production.o
 __Hreset_vec 4 0 CODE 0 reset_vec -
@@ -610,15 +631,15 @@ __CFG_WDTCCS$SWC 0 0 ABS 0 - dist/default/production\test.X.production.o
 __HbssBANK0 0 0 ABS 0 bssBANK0 -
 _SSPCLKPPS E20 0 ABS 0 - dist/default/production\test.X.production.o
 _SSPDATPPS E21 0 ABS 0 - dist/default/production\test.X.production.o
-__ptext1 D6C 0 CODE 0 text1 dist/default/production\test.X.production.o
-__ptext2 C68 0 CODE 0 text2 dist/default/production\test.X.production.o
-__ptext3 C46 0 CODE 0 text3 dist/default/production\test.X.production.o
-__ptext4 D0A 0 CODE 0 text4 dist/default/production\test.X.production.o
-__ptext5 C54 0 CODE 0 text5 dist/default/production\test.X.production.o
-__ptext6 C80 0 CODE 0 text6 dist/default/production\test.X.production.o
-__ptext7 C2E 0 CODE 0 text7 dist/default/production\test.X.production.o
-__ptext8 C22 0 CODE 0 text8 dist/default/production\test.X.production.o
-__ptext9 C16 0 CODE 0 text9 dist/default/production\test.X.production.o
+__ptext1 D44 0 CODE 0 text1 dist/default/production\test.X.production.o
+__ptext2 C40 0 CODE 0 text2 dist/default/production\test.X.production.o
+__ptext3 C0C 0 CODE 0 text3 dist/default/production\test.X.production.o
+__ptext4 CE2 0 CODE 0 text4 dist/default/production\test.X.production.o
+__ptext5 C2C 0 CODE 0 text5 dist/default/production\test.X.production.o
+__ptext6 C58 0 CODE 0 text6 dist/default/production\test.X.production.o
+__ptext7 BF4 0 CODE 0 text7 dist/default/production\test.X.production.o
+__ptext8 BE8 0 CODE 0 text8 dist/default/production\test.X.production.o
+__ptext9 BDC 0 CODE 0 text9 dist/default/production\test.X.production.o
 __Lpowerup 0 0 CODE 0 powerup -
 __Leeprom_data 0 0 EEDATA 3 eeprom_data -
 __size_of_EUSART_DefaultFramingErrorHandler 0 0 ABS 0 - dist/default/production\test.X.production.o
@@ -653,14 +674,14 @@ __Lram 0 0 ABS 0 ram -
 __size_of_PIN_MANAGER_Initialize 0 0 ABS 0 - dist/default/production\test.X.production.o
 _eusartRxLastError 2E 0 BANK0 1 bssBANK0 dist/default/production\test.X.production.o
 __size_of_EUSART_SetErrorHandler 0 0 ABS 0 - dist/default/production\test.X.production.o
-__end_of_OSCILLATOR_Initialize C68 0 CODE 0 text5 dist/default/production\test.X.production.o
+__end_of_OSCILLATOR_Initialize C40 0 CODE 0 text5 dist/default/production\test.X.production.o
 __CFG_PPS1WAY$ON 0 0 ABS 0 - dist/default/production\test.X.production.o
 __initialization FEC 0 CODE 0 cinit dist/default/production\test.X.production.o
 __CFG_PWRTE$OFF 0 0 ABS 0 - dist/default/production\test.X.production.o
 __pbssBANK0 20 0 BANK0 1 bssBANK0 dist/default/production\test.X.production.o
 __CFG_WRT$OFF 0 0 ABS 0 - dist/default/production\test.X.production.o
 _EUSART_is_tx_done 0 0 ABS 0 - dist/default/production\test.X.production.o
-_OSCILLATOR_Initialize C54 0 CODE 0 text5 dist/default/production\test.X.production.o
+_OSCILLATOR_Initialize C2C 0 CODE 0 text5 dist/default/production\test.X.production.o
 # %SPLITSTAB Section
 # This section enumerates all the psect splits performed by the assembler.
 # The beginning of the section is indicated by %SPLITSTAB.
@@ -687,23 +708,24 @@ _OSCILLATOR_Initialize C54 0 CODE 0 text5 dist/default/production\test.X.product
 # All other numeric quantities are in decimal.
 %SEGMENTS
 cinit 0 7F6 FEC A 2
-text1 0 6B6 D6C 95 2
-text2 0 634 C68 C 2
-text3 0 623 C46 7 2
-text4 0 685 D0A 31 2
-text5 0 62A C54 A 2
-text6 0 640 C80 21 2
-text7 0 617 C2E 6 2
-text8 0 611 C22 6 2
-text9 0 60B C16 6 2
-text10 0 661 CC2 24 2
-text11 0 607 C0E 4 2
-text12 0 606 C0C 1 2
-text13 0 605 C0A 1 2
-maintext 0 74B E96 AB 2
+text1 0 6A2 D44 95 2
+text2 0 620 C40 C 2
+text3 0 606 C0C 7 2
+text4 0 671 CE2 31 2
+text5 0 616 C2C A 2
+text6 0 62C C58 21 2
+text7 0 5FA BF4 6 2
+text8 0 5F4 BE8 6 2
+text9 0 5EE BDC 6 2
+text10 0 60D C1A 9 2
+text11 0 64D C9A 24 2
+text12 0 5EA BD4 4 2
+text13 0 5E9 BD2 1 2
+text14 0 5E8 BD0 1 2
+maintext 0 737 E6E BF 2
 cstackCOMMON 1 70 70 E 1
 stringtext1 0 800 1000 32 2
 reset_vec 0 0 0 4 2
-bssBANK0 1 20 20 46 1
-clrtext 0 61D C3A 6 2
+bssBANK0 1 20 20 47 1
+clrtext 0 600 C00 6 2
 config 0 8007 1000E 3 2

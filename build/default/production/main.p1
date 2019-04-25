@@ -44,6 +44,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "111 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 111: void EUSART_Initialize(void);
 [v _EUSART_Initialize `(v ~T0 @X0 0 ef ]
+"117 ./mcc_generated_files/spi.h
+[; ;./mcc_generated_files/spi.h: 117: void SPI_Initialize(void);
+[v _SPI_Initialize `(v ~T0 @X0 0 ef ]
 "29 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\c99\string.h: 29: void *memset (void *, int, size_t);
 [v _memset `(*v ~T0 @X0 0 ef3`*v`i`ui ]
@@ -58,9 +61,23 @@ Version 4.0 HI-TECH Software Intermediate Code
 "1629
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1629: extern volatile TRISAbits_t TRISAbits __attribute__((address(0x08C)));
 [v _TRISAbits `VS96 ~T0 @X0 0 e@140 ]
+"1709
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1709:     struct {
+[s S101 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S101 . TRISC0 TRISC1 TRISC2 TRISC3 TRISC4 TRISC5 TRISC6 TRISC7 ]
+"1708
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1708: typedef union {
+[u S100 `S101 1 ]
+[n S100 . . ]
+"1720
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 1720: extern volatile TRISCbits_t TRISCbits __attribute__((address(0x08E)));
+[v _TRISCbits `VS100 ~T0 @X0 0 e@142 ]
 "322 ./mcc_generated_files/eusart.h
 [; ;./mcc_generated_files/eusart.h: 322: uint8_t EUSART_Read(void);
 [v _EUSART_Read `(uc ~T0 @X0 0 ef ]
+"152 ./mcc_generated_files/spi.h
+[; ;./mcc_generated_files/spi.h: 152: uint8_t SPI_Exchange8bit(uint8_t data);
+[v _SPI_Exchange8bit `(uc ~T0 @X0 0 ef1`uc ]
 "2631 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 2631:     struct {
 [s S140 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
@@ -83,6 +100,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 "444
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 444: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
 [v _PORTAbits `VS36 ~T0 @X0 0 e@12 ]
+"524
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 524:     struct {
+[s S41 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S41 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
+"523
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 523: typedef union {
+[u S40 `S41 1 ]
+[n S40 . . ]
+"535
+[; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 535: extern volatile PORTCbits_t PORTCbits __attribute__((address(0x00E)));
+[v _PORTCbits `VS40 ~T0 @X0 0 e@14 ]
 "54 C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h
 [; ;C:\Program Files (x86)\Microchip\xc8\v2.05\pic\include\pic16f1619.h: 54: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -1504,187 +1532,212 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 1223 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"28 main.c
-[; ;main.c: 28: int main(int argc, char** argv)
+"20 main.c
+[; ;main.c: 20: int main(int argc, char** argv)
 [v _main `(i ~T0 @X0 1 ef2`i`**uc ]
-"29
-[; ;main.c: 29: {
+"21
+[; ;main.c: 21: {
 {
 [e :U _main ]
-"28
-[; ;main.c: 28: int main(int argc, char** argv)
+"20
+[; ;main.c: 20: int main(int argc, char** argv)
 [v _argc `i ~T0 @X0 1 r1 ]
 [v _argv `**uc ~T0 @X0 1 r2 ]
-"29
-[; ;main.c: 29: {
+"21
+[; ;main.c: 21: {
 [f ]
-"30
-[; ;main.c: 30:     SYSTEM_Initialize();
+"23
+[; ;main.c: 23:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"31
-[; ;main.c: 31:     OSCILLATOR_Initialize();
+"24
+[; ;main.c: 24:     OSCILLATOR_Initialize();
 [e ( _OSCILLATOR_Initialize ..  ]
-"35
-[; ;main.c: 35:     PIN_MANAGER_Initialize();
+"27
+[; ;main.c: 27:     PIN_MANAGER_Initialize();
 [e ( _PIN_MANAGER_Initialize ..  ]
+"28
+[; ;main.c: 28:     _delay((unsigned long)((10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"32
+[; ;main.c: 32:     EUSART_Initialize();
+[e ( _EUSART_Initialize ..  ]
+"33
+[; ;main.c: 33:     _delay((unsigned long)((10)*(32000000/4000.0)));
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
+"35
+[; ;main.c: 35:     SPI_Initialize();
+[e ( _SPI_Initialize ..  ]
 "36
 [; ;main.c: 36:     _delay((unsigned long)((10)*(32000000/4000.0)));
 [e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"44
-[; ;main.c: 44:     EUSART_Initialize();
-[e ( _EUSART_Initialize ..  ]
-"45
-[; ;main.c: 45:     _delay((unsigned long)((10)*(32000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 32000000 `l `d .4000.0 `ul ]
-"54
-[; ;main.c: 54:     int x = 0;
+"38
+[; ;main.c: 38:     int x = 0;
 [v _x `i ~T0 @X0 1 a ]
 [e = _x -> 0 `i ]
-"55
-[; ;main.c: 55:     uint8_t data[8];
+"39
+[; ;main.c: 39:     uint8_t data[8];
 [v _data `uc ~T0 @X0 -> 8 `i a ]
-"58
-[; ;main.c: 58:     memset(data, 0, sizeof(data));
+"40
+[; ;main.c: 40:     memset(data, 0, sizeof(data));
 [e ( _memset (3 , , -> &U _data `*v -> 0 `i -> # _data `ui ]
-"60
-[; ;main.c: 60:     TRISAbits.TRISA3 = 0;
+"42
+[; ;main.c: 42:     TRISAbits.TRISA3 = 0;
 [e = . . _TRISAbits 0 3 -> -> 0 `i `uc ]
-"61
-[; ;main.c: 61:     TRISAbits.TRISA4 = 0;
+"43
+[; ;main.c: 43:     TRISAbits.TRISA4 = 0;
 [e = . . _TRISAbits 0 4 -> -> 0 `i `uc ]
-"62
-[; ;main.c: 62:     TRISAbits.TRISA5= 0;
+"44
+[; ;main.c: 44:     TRISAbits.TRISA5 = 0;
 [e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
-"66
-[; ;main.c: 66:     while(1)
+"46
+[; ;main.c: 46:     TRISCbits.TRISC7 = 0;
+[e = . . _TRISCbits 0 7 -> -> 0 `i `uc ]
+"50
+[; ;main.c: 50:     while(1)
 [e :U 1229 ]
-"67
-[; ;main.c: 67:     {
+"51
+[; ;main.c: 51:     {
 {
-"99
-[; ;main.c: 99:         data[x] = EUSART_Read();
+"52
+[; ;main.c: 52:         data[x] = EUSART_Read();
 [e = *U + &U _data * -> -> _x `ui `ux -> -> # *U &U _data `ui `ux ( _EUSART_Read ..  ]
-"101
-[; ;main.c: 101:         uint8_t header = 0x59;
+"54
+[; ;main.c: 54:         uint8_t header = 0x59;
 [v _header `uc ~T0 @X0 1 a ]
 [e = _header -> -> 89 `i `uc ]
-"102
-[; ;main.c: 102:         uint8_t zero = 0x00;
+"55
+[; ;main.c: 55:         uint8_t zero = 0x00;
 [v _zero `uc ~T0 @X0 1 a ]
 [e = _zero -> -> 0 `i `uc ]
-"108
-[; ;main.c: 108:         uint16_t feet = 0x0299;
+"58
+[; ;main.c: 58:         uint16_t feet = 0x0040;
 [v _feet `us ~T0 @X0 1 a ]
-[e = _feet -> -> 665 `i `us ]
-"112
-[; ;main.c: 112:         x++;
+[e = _feet -> -> 64 `i `us ]
+"60
+[; ;main.c: 60:         uint8_t spi_data = 0x29;
+[v _spi_data `uc ~T0 @X0 1 a ]
+[e = _spi_data -> -> 41 `i `uc ]
+"62
+[; ;main.c: 62:         SPI_Exchange8bit(spi_data);
+[e ( _SPI_Exchange8bit (1 _spi_data ]
+"68
+[; ;main.c: 68:         x++;
 [e ++ _x -> 1 `i ]
-"114
-[; ;main.c: 114:         if (x == 8)
+"70
+[; ;main.c: 70:         if (x == 8)
 [e $ ! == _x -> 8 `i 1231  ]
-"115
-[; ;main.c: 115:         {
+"71
+[; ;main.c: 71:         {
 {
-"116
-[; ;main.c: 116:             x = 0;
+"72
+[; ;main.c: 72:             x = 0;
 [e = _x -> 0 `i ]
-"118
-[; ;main.c: 118:             for (int n = 0; n < 8; n++)
+"74
+[; ;main.c: 74:             for (int n = 0; n < 8; n++)
 {
 [v _n `i ~T0 @X0 1 a ]
 [e = _n -> 0 `i ]
 [e $ < _n -> 8 `i 1232  ]
 [e $U 1233  ]
 [e :U 1232 ]
-"119
-[; ;main.c: 119:             {
+"75
+[; ;main.c: 75:             {
 {
-"120
-[; ;main.c: 120:                 if ((data[n] != header) && (data[n] != zero))
+"76
+[; ;main.c: 76:                 if ((data[n] != header) && (data[n] != zero))
 [e $ ! && != -> *U + &U _data * -> -> _n `ui `ux -> -> # *U &U _data `ui `ux `i -> _header `i != -> *U + &U _data * -> -> _n `ui `ux -> -> # *U &U _data `ui `ux `i -> _zero `i 1235  ]
-"121
-[; ;main.c: 121:                 {
+"77
+[; ;main.c: 77:                 {
 {
-"122
-[; ;main.c: 122:                     uint16_t distance = (data[n+1] << 8) | data[n];
+"78
+[; ;main.c: 78:                     uint16_t distance = (data[n+1] << 8) | data[n];
 [v _distance `us ~T0 @X0 1 a ]
 [e = _distance -> | << -> *U + &U _data * -> -> + _n -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> 8 `i -> *U + &U _data * -> -> _n `ui `ux -> -> # *U &U _data `ui `ux `i `us ]
-"125
-[; ;main.c: 125:                     if((data[n - 1] == zero) && (data[n] != zero))
+"81
+[; ;main.c: 81:                     if((data[n - 1] == zero) && (data[n] != zero))
 [e $ ! && == -> *U + &U _data * -> -> - _n -> 1 `i `ui `ux -> -> # *U &U _data `ui `ux `i -> _zero `i != -> *U + &U _data * -> -> _n `ui `ux -> -> # *U &U _data `ui `ux `i -> _zero `i 1236  ]
-"126
-[; ;main.c: 126:                     {
+"82
+[; ;main.c: 82:                     {
 {
-"127
-[; ;main.c: 127:                         LATAbits.LATA5 = 0;
+"83
+[; ;main.c: 83:                         LATAbits.LATA5 = 0;
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-"128
-[; ;main.c: 128:                         PORTAbits.RA4 = 0;
+"84
+[; ;main.c: 84:                         PORTAbits.RA4 = 0;
 [e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
-"129
-[; ;main.c: 129:                     }
+"85
+[; ;main.c: 85:                         PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+"88
+[; ;main.c: 88:                     }
 }
 [e $U 1237  ]
-"133
-[; ;main.c: 133:                     else if (distance < feet)
+"92
+[; ;main.c: 92:                     else if (distance < feet)
 [e :U 1236 ]
 [e $ ! < -> _distance `ui -> _feet `ui 1238  ]
-"134
-[; ;main.c: 134:                     {
+"93
+[; ;main.c: 93:                     {
 {
-"136
-[; ;main.c: 136:                         LATAbits.LATA5 = 1;
+"95
+[; ;main.c: 95:                         LATAbits.LATA5 = 1;
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
-"137
-[; ;main.c: 137:                         PORTAbits.RA4 = 1;
+"96
+[; ;main.c: 96:                         PORTAbits.RA4 = 1;
 [e = . . _PORTAbits 0 4 -> -> 1 `i `uc ]
-"138
-[; ;main.c: 138:                     }
+"97
+[; ;main.c: 97:                         PORTCbits.RC7 = 1;
+[e = . . _PORTCbits 0 7 -> -> 1 `i `uc ]
+"98
+[; ;main.c: 98:                     }
 }
 [e $U 1239  ]
-"140
-[; ;main.c: 140:                     else
+"100
+[; ;main.c: 100:                     else
 [e :U 1238 ]
-"141
-[; ;main.c: 141:                     {
+"101
+[; ;main.c: 101:                     {
 {
-"142
-[; ;main.c: 142:                         LATAbits.LATA5 = 0;
+"102
+[; ;main.c: 102:                         LATAbits.LATA5 = 0;
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-"143
-[; ;main.c: 143:                         PORTAbits.RA4 = 0;
+"103
+[; ;main.c: 103:                         PORTAbits.RA4 = 0;
 [e = . . _PORTAbits 0 4 -> -> 0 `i `uc ]
-"144
-[; ;main.c: 144:                     }
+"104
+[; ;main.c: 104:                         PORTCbits.RC7 = 0;
+[e = . . _PORTCbits 0 7 -> -> 0 `i `uc ]
+"106
+[; ;main.c: 106:                     }
 }
 [e :U 1239 ]
 [e :U 1237 ]
-"145
-[; ;main.c: 145:                 }
+"107
+[; ;main.c: 107:                 }
 }
 [e :U 1235 ]
-"146
-[; ;main.c: 146:             }
+"108
+[; ;main.c: 108:             }
 }
 [e ++ _n -> 1 `i ]
 [e $ < _n -> 8 `i 1232  ]
 [e :U 1233 ]
 }
-"147
-[; ;main.c: 147:         }
+"109
+[; ;main.c: 109:         }
 }
 [e :U 1231 ]
-"148
-[; ;main.c: 148:     }
+"110
+[; ;main.c: 110:     }
 }
 [e :U 1228 ]
 [e $U 1229  ]
 [e :U 1230 ]
-"150
-[; ;main.c: 150:     return (0);
+"112
+[; ;main.c: 112:     return (0);
 [e ) -> 0 `i ]
 [e $UE 1227  ]
-"151
-[; ;main.c: 151: }
+"113
+[; ;main.c: 113: }
 [e :UE 1227 ]
 }
